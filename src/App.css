@@ -67,6 +67,11 @@
   cursor: pointer;
 }
 
-.opciones li:hover{
+.linkNavBar{
+  color: white;
+  text-decoration: none;
+}
+
+.opciones li a:hover{
  color: #61dafb;
 }
