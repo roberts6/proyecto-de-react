@@ -64,6 +64,7 @@
 .opciones li {
   margin: 0 2vw;
   list-style: none;
+  cursor: pointer;
 }
 
 .opciones li:hover{
