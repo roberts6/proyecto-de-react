@@ -2,13 +2,13 @@ import logo from './logo.svg';
 import './App.css';
 
 // Components
-import navBar from "./components/navBar";
+import NavBar from "./components/navBar";
 
 function App() {
   return (
     <div >
       <header className="App-header">
-      <navBar />
+      <NavBar />
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Mi nombre es Oscar Roberts
@@ -17,7 +17,7 @@ function App() {
           Mi proyecto se llama "Drop iT"
         </p>
         <p>
-          podés buscarme en <a href = "https://www.linkedin.com/in/oscar-roberts-529683a8/">LinkedIn</a>
+          podés buscarme en <a className = "linkedin" href = "https://www.linkedin.com/in/oscar-roberts-529683a8/">LinkedIn</a>
         </p>
         <a
           className="App-link"

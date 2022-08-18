@@ -1,7 +1,7 @@
-const navBar = () => {
+const NavBar = () => {
     return (
         <nav className = "barraNavegacion">
-            <ul>
+            <ul className = "opciones">
                 <li>Publicá</li>
                 <li>Comprá</li>
                 <li>Alquilá</li>
@@ -11,4 +11,4 @@ const navBar = () => {
     )
 }
 
-export default navBar;
+export default NavBar;

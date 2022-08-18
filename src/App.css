@@ -24,8 +24,15 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-link, .linkedin {
+    text-decoration: none;
+    color: #61dafb;
+}
+
+
+
+.linkedin:hover {
+  color: white;
 }
 
 @keyframes App-logo-spin {
@@ -38,5 +45,27 @@
 }
 
 .barraNavegacion{
-  color: white;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100vw;
+}
+
+.opciones{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.opciones li {
+  margin: 0 2vw;
+  list-style: none;
+}
+
+.opciones li:hover{
+ color: #61dafb;
 }
