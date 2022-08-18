@@ -45,14 +45,14 @@
 }
 
 .barraNavegacion{
-    color: white;
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: flex-end;
-    align-items: center;
-    flex-wrap: nowrap;
-    width: 100vw;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100vw;
 }
 
 .opciones{
@@ -74,4 +74,8 @@
 
 .opciones li a:hover{
  color: #61dafb;
+}
+
+.logo-navbar{
+  width: 5vw;
 }
