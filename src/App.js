@@ -1,10 +1,10 @@
 
 import './App.css';
 
-
 // Components
 import NavBar from "./components/navBar";
 import Header from "./components/header"
+import ZapatillasCard from "./components/CardComponent/ZapatillasCard"
 
 function App() {
   return (
@@ -16,6 +16,12 @@ function App() {
         <Header 
         titulo = "Tus nuevas Jordan te están esperando"
         subtitulo = "Podés encontrarlas en Drop It"
+        />
+
+        <ZapatillasCard
+        image = "."
+        name = "Air Jordan 1 Mid - Negro" 
+        price = "$1200"
         />
       </body>
     </div>
