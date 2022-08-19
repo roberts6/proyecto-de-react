@@ -5,9 +5,9 @@ const NavBar = () => {
         <nav className = "barraNavegacion">
             <img src={logoAzulSinFondo} className="logo-navbar" alt="logo" />
             <ul className = "opciones">
-                <li><a href = "https://www.coderhouse.com.mx/" className= "linkNavBar">Publicá</a></li>
-                <li><a href = "https://www.coderhouse.com.mx/" className= "linkNavBar">Comprá</a></li>
-                <li><a href = "https://www.coderhouse.com.mx/" className= "linkNavBar">Alquilá</a></li>
+                <li><a href = "https://www.coderhouse.com.mx/" className= "linkNavBar">Hombres</a></li>
+                <li><a href = "https://www.coderhouse.com.mx/" className= "linkNavBar">Mujeres</a></li>
+                <li><a href = "https://www.coderhouse.com.mx/" className= "linkNavBar">Niños</a></li>
                 <li><a href = "https://www.coderhouse.com.mx/" className= "linkNavBar">Iniciar Sesión</a></li>
             </ul>
         </nav>

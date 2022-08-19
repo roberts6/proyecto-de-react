@@ -1,0 +1,14 @@
+.banner{
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.anuncio{
+    color: red;
+}
+
+.jordanBanner{
+    height: 36vh;
+}
