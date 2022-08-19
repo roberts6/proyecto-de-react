@@ -13,7 +13,7 @@ export default function ZapatillasCard({name, price, description, image}) {
       <CardActionArea>
         <CardMedia
         component="img"
-        height="240"
+        height="340"
         image={image}
         alt="Air Jordan 1 Mid"
         />
