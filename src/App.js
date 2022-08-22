@@ -61,6 +61,45 @@ Exterior: Cuero 100%
 Forro: Poliéster 100%"
         />
       </div>
+
+      <div className = "cards-individual">
+        <ZapatillasCard
+        image = "https://cdn-images.farfetch-contents.com/14/60/16/40/14601640_22559259_1000.jpg"
+        //image = "./components/img/airJordan.svg"
+        name = "Tenis Air Jordan 6 Retro Cactus Jack de Jordan x Travis Scott"
+        price = "$5700"
+        description = "Características
+        color verde oliva, negro y rojo
+        piel de nobuk
+        plantilla con logo
+        cierre con agujetas en la parte delantera
+        diseño por el tobillo
+        
+        Composición
+        Suela: Goma 100%
+        
+        Exterior: Cuero 100%, Ante 100%, Lona 100%
+        
+        Forro: Poliéster 100%"
+        />
+      </div>
+
+      <div className = "cards-individual">
+        <ZapatillasCard
+        image = "https://cdn-images.farfetch-contents.com/17/76/89/38/17768938_38630461_1000.jpg"
+        //image = "./components/img/airJordan.svg"
+        name = "Tenis Air Jordan 1 High OG Brotherhood"
+        price = "$2860"
+        description = "Logo Air Jordan Wings característico, detalle del logo Swoosh característico, panel en contraste, puntera redonda, cierre con agujetas en la parte delantera, parche del logo en la lengüeta, diseño por el tobillo, plantilla con logo y suela de goma. Material: Cuero. Estos estilos son suministrados por un marketplace de tenis, el cual ofrece los artículos más codiciados y difíciles de encontrar de todo el mundo..
+
+        Composición
+        Suela: Goma 100%
+        
+        Forro: Tela 100%
+        
+        Exterior: Cuero 100%"
+        />
+      </div>
       </div>  
       </body>
     </div>

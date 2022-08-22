@@ -90,6 +90,9 @@
   flex-direction: row;
   align-content: center;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-width: 101vw;
 }
 
 .cards-individual{
@@ -104,4 +107,9 @@
 .greeting {
   font-family: 'Balsamiq Sans', cursive;
   font-family: 'Lobster', cursive;
+}
+
+.MuiCardContent-root{
+  height: 30vh;
+  overflow: scroll;
 }
