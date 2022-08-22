@@ -45,6 +45,22 @@ function App() {
         Estos estilos llegan a nosotros gracias a un marketplace de tenis especializados y piezas difíciles de conseguir. Cada producto es rigurosamente inspeccionado por expertos que garantizan su autenticidad."
         />
       </div>
+      <div className = "cards-individual">
+        <ZapatillasCard
+        image = "https://cdn-images.farfetch-contents.com/13/12/32/06/13123206_21511417_1000.jpg"
+        //image = "./components/img/airJordan.svg"
+        name = "Tenis Air Jordan 3 Retro"
+        price = "$4300"
+        description = "Puntera redonda y cierre con cordón.
+
+Composición
+Suela: Goma 100%
+
+Exterior: Cuero 100%
+
+Forro: Poliéster 100%"
+        />
+      </div>
       </div>  
       </body>
     </div>
