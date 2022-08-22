@@ -5,6 +5,7 @@ import './App.css';
 import NavBar from "./components/navBar";
 import Header from "./components/header"
 import ZapatillasCard from "./components/CardComponent/ZapatillasCard"
+import ItemListContainer from "./components/ItemListContainer"
 
 
 function App() {
@@ -12,6 +13,8 @@ function App() {
     <div >
       <header className="App-header">
       <NavBar />
+      <ItemListContainer 
+      greeting = "Soy el greeting"/>
       </header>
       <body className = "body">
         <Header 

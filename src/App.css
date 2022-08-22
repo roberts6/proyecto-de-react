@@ -95,3 +95,13 @@
 .cards-individual{
   margin: 1vw;
 }
+
+.CartWidget{
+  color: white;
+  width: 2vw;
+}
+
+.greeting {
+  font-family: 'Balsamiq Sans', cursive;
+  font-family: 'Lobster', cursive;
+}
