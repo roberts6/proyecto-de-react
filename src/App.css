@@ -45,14 +45,14 @@
 }
 
 .barraNavegacion{
-  color: white;
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
-  width: 100vw;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    width: 100vw;
 }
 
 .opciones{
@@ -98,7 +98,7 @@
 
 .CartWidget{
   color: white;
-  width: 2vw;
+  width: 4vw;
 }
 
 .greeting {
