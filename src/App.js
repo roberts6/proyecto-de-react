@@ -68,7 +68,8 @@ Forro: Poliéster 100%"
         //image = "./components/img/airJordan.svg"
         name = "Tenis Air Jordan 6 Retro Cactus Jack de Jordan x Travis Scott"
         price = "$5700"
-        description = "Características
+        description = "Características:
+        
         color verde oliva, negro y rojo
         piel de nobuk
         plantilla con logo
