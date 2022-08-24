@@ -113,3 +113,21 @@
   height: 30vh;
   overflow: scroll;
 }
+
+.handlerCart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.handlerButtons{
+  display: inline;
+}
+
+.state{
+  font-size: 2vw;
+}
+
+.handlerButtons button{
+  margin: 0.5vw;
+}
