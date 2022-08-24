@@ -44,7 +44,7 @@ const ItemCount = () => {
         //     setInitial(initial - 1);
         // }
         // else { return; }
-        const substracting = (initial > 0) ? setInitial(initial - 1) : stock
+        const substracting = (initial > 0) ? setInitial(initial - 1) : 0
         console.log(substracting)
     }
     return ( 
