@@ -1,51 +1,23 @@
 import React, {useState} from "react"
+import SinEstock from "../img/empty-storage.jpeg"
+import Swal from 'sweetalert'
 
-// const ItemCount = () => {
-//     const [counter, setCounter] = useState(0)
-//     const addButton = () => {
-//         if(counter < 6){
-//             setCounter(counter + 1)
-//         }else {
-//             alert("Se acabó el stock")
-//         }
-//     }
-//     const substractButton = () => {
-//         if (counter >= 1) {
-//             setCounter(counter - 1)
-//         }
-//         else{
-//             alert("Tu carrito está vacío")
-//         }
-//     }
-//     return ( 
-//     <div>
-//         <p >
-//             {counter}
-//         </p>
-//         <button onClick={addButton}>+</button>
-//         <button onClick={substractButton}>-</button>
-//     </div>
-//     )
-// }
 
 const ItemCount = () => {
     const stock = 10
     const [initial, setInitial] = useState(0);
     const onAdd = () => {
-        // if (initial < stock  ) {
-        //     setInitial(initial + 1);
-        // }
-        // else { return; }
-        const adding = (initial < stock) ? setInitial(initial + 1) : stock
-        console.log(adding)
+        return initial < stock ? setInitial(initial + 1) : Swal.fire({
+            title: 'Sweet!',
+            text: 'Modal with a custom image.',
+            image: SinEstock,
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: 'Custom image',
+          })
     }
     const onSubstract = () => {
-        // if (initial > 0  ) {
-        //     setInitial(initial - 1);
-        // }
-        // else { return; }
-        const substracting = (initial > 0) ? setInitial(initial - 1) : 0
-        console.log(substracting)
+        return initial > 0 ? setInitial(initial - 1) : alert("Tu carrito está vacio")
     }
     return ( 
             <div className= "handlerCart">
