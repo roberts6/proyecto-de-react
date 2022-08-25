@@ -4,26 +4,29 @@ import Swal from 'sweetalert2'
 
 
 const ItemCount = () => {
-    const stock = 10
+    const stock = 6
     const [initial, setInitial] = useState(0);
     const onAdd = () => {
         return initial < stock ? setInitial(initial + 1) : Swal.fire({
+          icon: "warning",
           title: 'No hay más stock',
           text: 'Lo sentimos :(',
-          imageUrl: 'https://www.bigstockphoto.com/image-370803004/stock-photo-empty-storage-room-warehouse-shelves-for-goods',
+          //imageUrl: 'https://www.bigstockphoto.com/image-370803004/stock-photo-empty-storage-room-warehouse-shelves-for-goods',
+          imageUrl: <img src= "./components/img/empty-storage.jpeg" alt= "Sin Stock" />,
           imageWidth: 400,
           imageHeight: 200,
-          imageAlt: 'Custom image',
+          imageAlt: 'Sin Stock',
         })
     }
     const onSubstract = () => {
         return initial > 0 ? setInitial(initial - 1) : Swal.fire({
+          icon: "error",
           title: 'Tu carrito está vacío!',
           text: 'No agregaste nada aún',
-          imageUrl: '../',
+          imageUrl: './components/img/empty-storage.jpeg',
           imageWidth: 400,
           imageHeight: 200,
-          imageAlt: 'Custom image',
+          imageAlt: 'Carrito vacío',
         })
     }
     return ( 
