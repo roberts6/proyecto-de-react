@@ -1,6 +1,6 @@
 import React, {useState} from "react"
-import SinEstock from "../img/empty-storage.jpeg"
-import Swal from 'sweetalert'
+//import SinEstock from "../img/empty-storage.jpeg"
+import Swal from 'sweetalert2'
 
 
 const ItemCount = () => {
@@ -8,16 +8,23 @@ const ItemCount = () => {
     const [initial, setInitial] = useState(0);
     const onAdd = () => {
         return initial < stock ? setInitial(initial + 1) : Swal.fire({
-            title: 'Sweet!',
-            text: 'Modal with a custom image.',
-            image: SinEstock,
-            imageWidth: 400,
-            imageHeight: 200,
-            imageAlt: 'Custom image',
-          })
+          title: 'No hay más stock',
+          text: 'Lo sentimos :(',
+          imageUrl: 'https://www.bigstockphoto.com/image-370803004/stock-photo-empty-storage-room-warehouse-shelves-for-goods',
+          imageWidth: 400,
+          imageHeight: 200,
+          imageAlt: 'Custom image',
+        })
     }
     const onSubstract = () => {
-        return initial > 0 ? setInitial(initial - 1) : alert("Tu carrito está vacio")
+        return initial > 0 ? setInitial(initial - 1) : Swal.fire({
+          title: 'Tu carrito está vacío!',
+          text: 'No agregaste nada aún',
+          imageUrl: '../',
+          imageWidth: 400,
+          imageHeight: 200,
+          imageAlt: 'Custom image',
+        })
     }
     return ( 
             <div className= "handlerCart">
