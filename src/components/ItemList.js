@@ -17,9 +17,9 @@ console.log(sneakers.name)
 
   return (
     <div>
-      {sneakers.map((sneaker) => {
+      {/* {sneakers.map((sneaker) => {
           return <p>{sneaker.name}</p>
-      })}
+      })} */}
     </div>  
   )
 }
