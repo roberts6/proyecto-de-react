@@ -6,17 +6,17 @@ import NavBar from "./components/navBar";
 import Header from "./components/header"
 import ZapatillasCard from "./components/CardComponent/ZapatillasCard"
 import ItemListContainer from "./components/ItemListContainer"
-
+import ItemList from "./components/ItemList"
 
 function App() {
   return (
+  <body className = "body">
     <div >
       <header className="App-header">
       <NavBar />
       <ItemListContainer 
       greeting = "Soy el greeting"/>
       </header>
-      <body className = "body">
         <Header 
         titulo = "Tus nuevas Jordan te están esperando"
         subtitulo = "Podés encontrarlas en Drop It"
@@ -52,12 +52,9 @@ function App() {
         name = "Tenis Air Jordan 3 Retro"
         price = "$4300"
         description = "Puntera redonda y cierre con cordón.
-
 Composición
 Suela: Goma 100%
-
 Exterior: Cuero 100%
-
 Forro: Poliéster 100%"
         />
       </div>
@@ -92,7 +89,6 @@ Forro: Poliéster 100%"
         name = "Tenis Air Jordan 1 High OG Brotherhood"
         price = "$2860"
         description = "Logo Air Jordan Wings característico, detalle del logo Swoosh característico, panel en contraste, puntera redonda, cierre con agujetas en la parte delantera, parche del logo en la lengüeta, diseño por el tobillo, plantilla con logo y suela de goma. Material: Cuero. Estos estilos son suministrados por un marketplace de tenis, el cual ofrece los artículos más codiciados y difíciles de encontrar de todo el mundo..
-
         Composición
         Suela: Goma 100%
         
@@ -102,8 +98,9 @@ Forro: Poliéster 100%"
         />
       </div>
       </div>  
-      </body>
     </div>
+    <ItemList />
+    </body>
   );
 }
 
