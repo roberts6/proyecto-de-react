@@ -13,12 +13,12 @@ const ItemList = () => {
   .then(data => setSneakers(data))  
     },[]);
 
-console.log(sneakers.name)
+console.log("este es el nombre de los sneakers",sneakers.results[0].name)
 
   return (
     <div>
-      {/* {sneakers.map((sneaker) => {
-          return <p>{sneaker.name}</p>
+      {/* {sneakers.map((sneaker, index) => {
+          return <p>{sneaker.results[index].name}</p>
       })} */}
     </div>  
   )
