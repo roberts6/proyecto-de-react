@@ -7,7 +7,7 @@ import { CardActionArea } from '@mui/material';
 //import img from "../../img/airJordan.svg"
 
 
-export default function ZapatillasCard({name, price, description, image}) {
+const Item = ({name, price, description, image}) => {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
@@ -15,7 +15,7 @@ export default function ZapatillasCard({name, price, description, image}) {
         component="img"
         height="340"
         image={image}
-        alt="Air Jordan 1 Mid"
+        alt="-"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
@@ -33,3 +33,4 @@ export default function ZapatillasCard({name, price, description, image}) {
   );
 }
 
+export default Item;

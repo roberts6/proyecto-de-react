@@ -1,27 +1,39 @@
 import React, {useState, useEffect} from 'react'
+import Item from "./CardComponent/Item"
+
 
 const ItemList = () => {
-    const [sneakers, setSneakers] = useState([]);
+  const [Items, setItems] = useState([]);
 
-    console.log("Esto trae el array de sneakers: ",sneakers);
+  useEffect(() => {    
+    setTimeout(() => {
+      fetch('https://swapi.dev/api/people')
+      .then(response => response.json())
+      .then(data => setItems(data))
+      .catch(err => console.error(err));  
+    }, 2000);
+        },[]);
     
 
-  
-    useEffect(() => {    
-    fetch('https://swapi.dev/api/people')
-  .then(response => response.json())
-  .then(data => setSneakers(data))  
-    },[]);
 
-console.log("este es el nombre de los sneakers",sneakers.results[0].name)
+   
+console.log("este es el nombre del sneaker en el index 0",Items.results[0].name)
 
   return (
-    <div>
-      {/* {sneakers.map((sneaker, index) => {
-          return <p>{sneaker.results[index].name}</p>
+    <div >
+      {/* {Items.map((product) => {
+        return (
+          <Item
+            key={product.id}
+            name={product.name}
+            img={product.img}
+            price= {product.price}
+            description={product.role}
+          />
+        );
       })} */}
-    </div>  
-  )
-}
+    </div>
+  );
+};
 
-export default ItemList
+export default ItemList;

@@ -4,7 +4,7 @@ import './App.css';
 // Components
 import NavBar from "./components/navBar";
 import Header from "./components/header"
-import ZapatillasCard from "./components/CardComponent/ZapatillasCard"
+import ZapatillasCard from "./components/CardComponent/Item"
 import ItemListContainer from "./components/ItemListContainer"
 import ItemList from "./components/ItemList"
 
