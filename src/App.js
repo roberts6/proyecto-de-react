@@ -98,7 +98,7 @@ Forro: Poliéster 100%"
         Exterior: Cuero 100%"
         />
       </div>
-      <div className = "cards-individual">
+      <div>
           <ItemList />
       </div>
       </div>  
