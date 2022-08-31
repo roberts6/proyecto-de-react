@@ -4,9 +4,10 @@ import './App.css';
 // Components
 import NavBar from "./components/navBar";
 import Header from "./components/header"
-import ZapatillasCard from "./components/CardComponent/Item"
+import ZapatillasCard from "./components/CardComponent/ZapatillaCard"
 import ItemListContainer from "./components/ItemListContainer"
 import ItemList from "./components/ItemList"
+
 
 function App() {
   return (
@@ -97,9 +98,12 @@ Forro: Poliéster 100%"
         Exterior: Cuero 100%"
         />
       </div>
+      <div className = "cards-individual">
+          <ItemList />
+      </div>
       </div>  
     </div>
-    <ItemList />
+   
     </body>
   );
 }

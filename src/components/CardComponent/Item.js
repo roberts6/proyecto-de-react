@@ -7,30 +7,23 @@ import { CardActionArea } from '@mui/material';
 //import img from "../../img/airJordan.svg"
 
 
-const Item = ({name, price, description, image}) => {
-  return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
-        <CardMedia
-        component="img"
-        height="340"
-        image={image}
-        alt="-"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            {name}
-          </Typography>
-          <Typography variant="body3" color="text.secondary">
-            {price}
-          </Typography>
-          <Typography variant="body1" size="text.secondary">
-            {description}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
-  );
-}
+
+const Item = ({ data }) => {
+	return (
+		<Card sx={{ maxWidth: 345, margin: 10 }}>
+			<CardActionArea>
+				<CardMedia component='img' image={data.avatar_url} alt='Avatar' />
+				<CardContent>
+					<Typography gutterBottom variant='h5' component='div'>
+						{data.login}
+					</Typography>
+					<Typography variant='body2' color='text.secondary'>
+						{data.html_url}
+					</Typography>
+				</CardContent>
+			</CardActionArea>
+		</Card>
+	);
+};
 
 export default Item;
