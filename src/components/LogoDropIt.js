@@ -1,4 +1,5 @@
 import logoAzulSinFondo from '../img/logoAzulSinFondo.svg';
+import React from "react"
 
 const LogoDropIt = () => {
     return (
