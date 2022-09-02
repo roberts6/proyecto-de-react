@@ -9,7 +9,7 @@ import { CardActionArea } from '@mui/material';
 
 const Item = ({ data }) => {
 	return (
-		<Card sx={{ maxWidth: 345, margin: 10 }}>
+		<Card sx={{ maxWidth: 345 }}>
 			<CardActionArea>
 				<CardMedia component='img' image={data.avatar_url} alt='Avatar' />
 				<CardContent>
@@ -17,7 +17,7 @@ const Item = ({ data }) => {
 						{data.login}
 					</Typography>
 					<Typography variant='body2' color='text.secondary'>
-						{data.html_url}
+						<a href= {data.html_url}>Link a GitHub</a>
 					</Typography>
 				</CardContent>
 			</CardActionArea>

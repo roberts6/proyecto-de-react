@@ -100,11 +100,24 @@
 }
 
 .cards-individual-fetch{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100vw;
+}
+
+.MuiPaper-root{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 200vw;
+  margin: 2vw;
 }
 
 .CartWidget{

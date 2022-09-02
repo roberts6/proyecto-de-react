@@ -8,8 +8,8 @@ const ItemList = () => {
 
 	useEffect(() => {    
     setTimeout(() => {
-      fetch('https://api.github.com/users')
-      .then(response => response.json())
+	  fetch('https://api.github.com/users')
+	  .then(response => response.json())
       .then(data => setItems(data))
       .catch(err => console.error(err));  
     }, 2000);
