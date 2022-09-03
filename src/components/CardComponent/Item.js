@@ -11,13 +11,13 @@ const Item = ({ data }) => {
 	return (
 		<Card sx={{ maxWidth: 345 }}>
 			<CardActionArea>
-				<CardMedia component='img' image={data.avatar_url} alt='Avatar' />
+				<CardMedia component='img' image={data.image} alt='Avatar' />
 				<CardContent>
 					<Typography gutterBottom variant='h5' component='div'>
-						{data.login}
+						{data.price}
 					</Typography>
 					<Typography variant='body2' color='text.secondary'>
-						<a href= {data.html_url}>Link a GitHub</a>
+						{data.description}
 					</Typography>
 				</CardContent>
 			</CardActionArea>

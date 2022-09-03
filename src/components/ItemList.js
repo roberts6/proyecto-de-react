@@ -8,7 +8,9 @@ const ItemList = () => {
 
 	useEffect(() => {    
     setTimeout(() => {
-	  fetch('https://api.github.com/users')
+	  //fetch('https://api.github.com/users')
+	  
+	  fetch('https://fakestoreapi.com/products')
 	  .then(response => response.json())
       .then(data => setItems(data))
       .catch(err => console.error(err));  
