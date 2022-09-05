@@ -11,10 +11,10 @@ const Item = ({ data }) => {
 	return (
 		<Card sx={{ maxWidth: 345 }}>
 			<CardActionArea>
-				<CardMedia component='img' image={data.image} alt='Avatar' />
+				<CardMedia component='img' image={data.image} alt='Producto' />
 				<CardContent>
 					<Typography gutterBottom variant='h5' component='div'>
-						{data.price}
+						${data.price}
 					</Typography>
 					<Typography variant='body2' color='text.secondary'>
 						{data.description}

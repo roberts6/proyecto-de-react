@@ -1,12 +1,14 @@
 
 import './App.css';
 import React from "react";
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 
 // Components
 import NavBar from "./components/navBar";
 import Header from "./components/header"
 import ZapatillasCard from "./components/CardComponent/ZapatillaCard"
 import ItemListContainer from "./components/ItemListContainer"
+import ItemDetail from './components/ItemDetail';
 import ItemList from "./components/ItemList"
 
 
@@ -99,9 +101,17 @@ Forro: Poliéster 100%"
         Exterior: Cuero 100%"
         />
       </div>
+
       <div>
           <ItemList />
       </div>
+<Router>
+  <div>
+    <Routes>
+      <Route path= '/detail/:id' element={<ItemDetail />}/>
+    </Routes>
+  </div>
+</Router>
       </div>  
     </div>
    
