@@ -1,10 +1,13 @@
-import React, {useState, useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
+import {Link} from "react-router-dom"
 import Item from "./CardComponent/Item"
+
 
 
 
 const ItemList = () => {
 	const [Items, setItems] = useState([]);
+	//let {id} = useParams(); // desestructuro el id para que solo me traiga el número y no un objeto
 
 	useEffect(() => {    
     setTimeout(() => {
@@ -16,11 +19,18 @@ const ItemList = () => {
         },[]);
 
 	return (
-		<div className = "cards-individual-fetch">
-			{Items.map((item) => {
-				return <Item key={item.id} data={item} />;
-			})}
-		</div>
+<div className="cards">
+	{Items.map((item) => {
+return(
+	<div key={item.id} className = "cards-individual-fetch">
+{/* <Link to= "/hombres"> */}
+<Link to= {`/detail/${item.id}`}>
+   <Item data={item}/>
+</Link>
+	</div>
+)
+	})}
+</div> 
 	);
 };
 

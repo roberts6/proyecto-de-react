@@ -6,25 +6,48 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 // Components
 import NavBar from "./components/navBar";
 import Header from "./components/header"
-import ZapatillasCard from "./components/CardComponent/ZapatillaCard"
 import ItemListContainer from "./components/ItemListContainer"
 import ItemDetail from './components/ItemDetail';
-import ItemList from "./components/ItemList"
 
+
+
+// Import views
+//import SneakerDetail from "./views/SneakerDetail/SneakerDetail"
+import Home from "./views/home/Home"
+import Hombres from "./views/hombres/Hombres"
+import Mujeres from "./views/mujeres/Mujeres"
+import Kids from "./views/kids/Kids"
+import Login from "./views/LogIn/Login"
 
 function App() {
   return (
   <body className = "body">
     <div >
       <header className="App-header">
+  <Router>
+     <div className= "Linkedin">
       <NavBar />
       <ItemListContainer 
       greeting = "Soy el greeting"/>
-      </header>
-        <Header 
+      <Header 
         titulo = "Tus nuevas Jordan te están esperando"
         subtitulo = "Podés encontrarlas en Drop It"
         />
+       <Routes>
+          <Route path= '/' element={<Home />}/> 
+          <Route path= '/hombres' element={<Hombres />}/>
+          <Route path= '/mujeres' element={<Mujeres />}/>
+          <Route path= '/kids' element={<Kids />}/>
+          <Route path= '/login' element={<Login />}/>
+          <Route path= '/detail/:id' element={<ItemDetail />}/>
+       </Routes>
+     </div>
+</Router>
+     
+      </header>
+        
+      {/* TARJETAS ESTÁTICAS
+      
       <div className = "cards">
       <div className = "cards-individual">
         <ZapatillasCard
@@ -100,19 +123,13 @@ Forro: Poliéster 100%"
         
         Exterior: Cuero 100%"
         />
-      </div>
+      </div> */}
 
-      <div>
+      {/* <div>
           <ItemList />
-      </div>
-<Router>
-  <div>
-    <Routes>
-      <Route path= '/detail/:id' element={<ItemDetail />}/>
-    </Routes>
-  </div>
-</Router>
-      </div>  
+      </div> 
+
+       </div> */}  
     </div>
    
     </body>

@@ -1,3 +1,7 @@
+*{
+  text-decoration: none;
+}
+
 .App {
   text-align: center;
 }
@@ -133,6 +137,7 @@
 .MuiCardContent-root{
   height: 30vh;
   overflow: scroll;
+  text-decoration: none;
 }
 
 .handlerCart{
@@ -151,4 +156,43 @@
 
 .handlerButtons button{
   margin: 0.5vw;
+}
+
+.contenedor-individual{
+  display: flex;
+  justify-content: center;
+}
+
+.individual{
+  width: 50vw;
+  margin: 1vw;
+}
+
+.individual .MuiTypography-body2{
+  color: white;
+  width: 40vw;
+  margin: auto;
+}
+
+.MuiTypography-root{
+  text-decoration: none;
+}
+
+.individual .MuiChip-root{
+  color: white;
+  margin: 0 2vw;
+}
+
+.individual .css-w4z10b-MuiStack-root {
+  display: flex;
+  justify-content: center;
+}
+
+div .MuiCardContent-root{
+  text-decoration: none;
+}
+
+.individual .css-o69gx8-MuiCardMedia-root{
+  width: 20vw;
+  margin: auto;
 }

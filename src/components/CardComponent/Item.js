@@ -9,6 +9,7 @@ import { CardActionArea } from '@mui/material';
 
 const Item = ({ data }) => {
 	return (
+	<div className = "cards-individual" id= {data.id}>
 		<Card sx={{ maxWidth: 345 }}>
 			<CardActionArea>
 				<CardMedia component='img' image={data.image} alt='Producto' />
@@ -17,11 +18,15 @@ const Item = ({ data }) => {
 						${data.price}
 					</Typography>
 					<Typography variant='body2' color='text.secondary'>
-						{data.description}
+						{data.category}
+					</Typography>
+					<Typography variant='body2' color='text.secondary'>
+						{data.title}
 					</Typography>
 				</CardContent>
 			</CardActionArea>
 		</Card>
+	</div>
 	);
 };
 
