@@ -23,7 +23,6 @@ const ItemList = () => {
 	{Items.map((item) => {
 return(
 	<div key={item.id} className = "cards-individual-fetch">
-{/* <Link to= "/hombres"> */}
 <Link to= {`/detail/${item.id}`}>
    <Item data={item}/>
 </Link>

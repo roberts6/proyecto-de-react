@@ -3,7 +3,7 @@ import ItemList from "../../components/ItemList"
 
 function home() {
   return (
-    <div classname= "cards">
+    <div className="cards-products">
       <ItemList />
     </div>
   )

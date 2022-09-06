@@ -1,6 +1,9 @@
-*{
+* {
+  padding: 0;
+  margin: 0;
   text-decoration: none;
-}
+  list-style: none;
+  box-sizing: border-box; }
 
 .App {
   text-align: center;
@@ -53,8 +56,8 @@
     display: flex;
     flex-direction: row;
     align-content: center;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: space-around;
+    align-items: center;
     flex-wrap: nowrap;
     width: 100vw;
 }
@@ -63,12 +66,14 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    margin-top: 1vw;
 }
 
-.opciones li {
+.opciones a {
   margin: 0 2vw;
   list-style: none;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .linkNavBar{
@@ -82,25 +87,44 @@
 
 .logo-navbar{
   width: 5vw;
+  margin: 1vw;
 }
 
 .body{
   background-color: #3c424e;
-  min-height: 100vh;
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+}
+
+.seraEste{
+  text-align: center;
+    margin-bottom: 1vw;
+}
+
+.cards-products{
+  display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	margin: 40px 0 40px 0;
+	gap: 40px;
 }
 
 .cards{
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  min-width: 101vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-width: 101vw;
 }
 
 .cards-individual{
   margin: 1vw;
+  text-decoration: none;
+}
+
+.cards-individual a{
+  text-decoration: none;
 }
 
 .cards-individual-fetch{
@@ -127,6 +151,7 @@
 .CartWidget{
   color: white;
   width: 4vw;
+  margin-top: 1vw;
 }
 
 .greeting {
@@ -148,6 +173,11 @@
 
 .handlerButtons{
   display: inline;
+  width: 10vw;
+}
+
+.handlerButtons button{
+  width: 3vw;
 }
 
 .state{
@@ -180,7 +210,7 @@
 
 .individual .MuiChip-root{
   color: white;
-  margin: 0 2vw;
+  margin: 0 1vw;
 }
 
 .individual .css-w4z10b-MuiStack-root {
@@ -189,7 +219,7 @@
 }
 
 div .MuiCardContent-root{
-  text-decoration: none;
+  max-height: 30vh;
 }
 
 .individual .css-o69gx8-MuiCardMedia-root{

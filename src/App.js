@@ -25,7 +25,7 @@ function App() {
     <div >
       <header className="App-header">
   <Router>
-     <div className= "Linkedin">
+     <div>
       <NavBar />
       <ItemListContainer 
       greeting = "Soy el greeting"/>

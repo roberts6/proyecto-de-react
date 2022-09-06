@@ -46,7 +46,7 @@ return(
           Elige tu talle
         </Typography>
         <Stack direction="row" spacing={1}>
-          <Chip label="Extra Small" />
+          <Chip label="X Small" />
           <Chip color="primary" label="Small" />
           <Chip label="Medium" />
           <Chip label="Large" />
