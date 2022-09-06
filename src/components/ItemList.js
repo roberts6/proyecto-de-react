@@ -7,7 +7,6 @@ import Item from "./CardComponent/Item"
 
 const ItemList = () => {
 	const [Items, setItems] = useState([]);
-	//let {id} = useParams(); // desestructuro el id para que solo me traiga el número y no un objeto
 
 	useEffect(() => {    
     setTimeout(() => {

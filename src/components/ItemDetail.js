@@ -7,9 +7,10 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import Box from '@mui/material/Box';
 import Chip from '@mui/material/Chip';
-import Button from '@mui/material/Button';
+//import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
+import ItemCount from "./ItemCount"
 
 
 
@@ -25,8 +26,6 @@ useEffect(() => {
     .catch(err => console.error(err));  
   }, 2000);
       },[id]);
-
-      console.log(item);
 
 return(
   <div className="contenedor-individual">
@@ -54,7 +53,8 @@ return(
           <Chip label="XXLarge" />
         </Stack>
         <Box sx={{ mt: 3, ml: 1, mb: 1 }}>
-        <Button>Add to cart</Button>
+          <ItemCount />
+        {/* <Button>Add to cart</Button> */}
       </Box>
       </Box>
 				</CardContent>
