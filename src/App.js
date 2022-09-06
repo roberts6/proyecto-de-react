@@ -1,5 +1,6 @@
 
-import './App.css';
+//import './App.css';
+import './estilos.css';
 import React from "react";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 
@@ -22,10 +23,10 @@ import Login from "./views/LogIn/Login"
 function App() {
   return (
   <body className = "body">
-    <div >
-      <header className="App-header">
+    <div className= "grid">
+      {/* <header className="App-header"> */}
   <Router>
-     <div>
+     <div className="router">
       <NavBar />
       <ItemListContainer 
       greeting = "Soy el greeting"/>
@@ -44,7 +45,7 @@ function App() {
      </div>
 </Router>
      
-      </header>
+      {/* </header> */}
         
       {/* TARJETAS ESTÁTICAS
       

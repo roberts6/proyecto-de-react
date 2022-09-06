@@ -53,9 +53,9 @@ return(
           <Chip label="XLarge" />
           <Chip label="XXLarge" />
         </Stack>
-      </Box>
-      <Box sx={{ mt: 3, ml: 1, mb: 1 }}>
+        <Box sx={{ mt: 3, ml: 1, mb: 1 }}>
         <Button>Add to cart</Button>
+      </Box>
       </Box>
 				</CardContent>
 			</CardActionArea>

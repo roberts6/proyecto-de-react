@@ -1,0 +1,146 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box; }
+
+.body{
+  width: 100%;
+  background-color: #282c34;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+}
+
+.router{
+    grid-row: 1/9;
+    grid-column: 1/11;
+}
+
+.barraNavegacion{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2.5vw;
+}
+
+.logo-navbar{
+    width: 5vw;
+}
+
+.CartWidget{
+    color: white;
+    font-size: 2.5vw;
+}
+
+.opciones a{
+    margin: 1vw;
+    text-decoration: none;
+}
+
+.seraEste{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.greeting{
+    color: white;
+}
+
+.handlerCart{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+.handlerButtons button{
+    margin: 0 1vw 1vw;
+    width: 2.5vw;
+}
+
+.botonAnadir{
+    margin-bottom: 1vw;
+}
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards-individual-fetch{
+    width: 30vw;
+}
+
+.cards-individual{
+    width: 25vw;
+    margin: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards-individual .MuiPaper-root{
+    padding: 1vw;
+    height: 65vh;display: flex;
+    justify-content: center;
+    overflow: scroll;
+    align-content: center;
+}
+
+.individual .MuiTypography-body2{
+    color: white;
+    width: 40vw;
+    margin: auto;
+  }
+  
+  .MuiTypography-root{
+    text-decoration: none;
+  }
+  
+  .individual .MuiChip-root{
+    color: white;
+    margin: 0 1vw;
+  }
+  
+  .individual .css-w4z10b-MuiStack-root {
+    display: flex;
+    justify-content: center;
+  }
+  
+  div .MuiCardContent-root{
+    max-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+  }
+
+  .individual{
+    margin-top: 1.5vw;
+  }
+  
+  .individual .css-o69gx8-MuiCardMedia-root{
+    width: 20vw;
+    margin: auto;
+  }
+
+  .MuiBox-root{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
