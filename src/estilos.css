@@ -101,6 +101,10 @@
     align-content: center;
 }
 
+.cards-individual .MuiTypography-root .MuiTypography-h5{
+    color: black;
+}
+
 .individual .MuiTypography-body2{
     color: white;
     width: 40vw;
@@ -142,5 +146,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+.cards-individual .css-h93ljk-MuiTypography-root{
+    color: black;
   }
 
