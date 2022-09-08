@@ -9,6 +9,7 @@ import { CardActionArea } from '@mui/material';
 
 const Item = ({ data }) => {
 	return (
+		data ? 
 	<div className = "cards-individual" id= {data.id}>
 		<Card sx={{ maxWidth: 345 }}>
 			<CardActionArea>
@@ -26,7 +27,7 @@ const Item = ({ data }) => {
 				</CardContent>
 			</CardActionArea>
 		</Card>
-	</div>
+	</div> : null
 	);
 };
 

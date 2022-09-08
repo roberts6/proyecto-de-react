@@ -1,4 +1,3 @@
-
 import React, {useEffect, useState} from 'react'
 import {useParams} from "react-router-dom"
 import CardContent from '@mui/material/CardContent';
@@ -7,10 +6,9 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import Box from '@mui/material/Box';
 import Chip from '@mui/material/Chip';
-//import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
-import ItemCount from "./ItemCount"
+import ItemCount from "../../components/ItemCount"
 
 
 
@@ -28,6 +26,7 @@ useEffect(() => {
       },[id]);
 
 return(
+  item ? 
   <div className="contenedor-individual">
    <div className = "individual" id= {item.id}>
 			<CardActionArea>
@@ -54,7 +53,6 @@ return(
         </Stack>
         <Box sx={{ mt: 3, ml: 1, mb: 1 }}>
           <ItemCount />
-        {/* <Button>Add to cart</Button> */}
       </Box>
       </Box>
 				</CardContent>
@@ -62,6 +60,7 @@ return(
 	</div>
 
   </div>
+  : null
 )
 }
 

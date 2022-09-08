@@ -5,7 +5,7 @@ import Item from "./CardComponent/Item"
 
 
 
-const ItemList = ({Items}) => {
+const ItemList = ({data}) => {
 	// const [Items, setItems] = useState([]);
 
 	// useEffect(() => {    
@@ -19,7 +19,7 @@ const ItemList = ({Items}) => {
 
 	return (
 <div className="cards">
-	{Items.map((item) => {
+	{data? data.map ((item) => {
 return(
 	<div key={item.id} className = "cards-individual-fetch">
 <Link to= {`/detail/${item.id}`}>
@@ -27,7 +27,7 @@ return(
 </Link>
 	</div>
 )
-	})}
+	}) : null}
 </div> 
 	);
 };

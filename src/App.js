@@ -8,12 +8,10 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import NavBar from "./components/navBar";
 import Header from "./components/header"
 import ItemListContainer from "./components/ItemListContainer"
-import ItemDetail from './components/ItemDetail';
-
-
+import ItemList from "./components/ItemList"
 
 // Import views
-//import SneakerDetail from "./views/SneakerDetail/SneakerDetail"
+import ItemDetail from "./views/ItemDetail/ItemDetail"
 import Home from "./views/home/Home"
 import Hombres from "./views/hombres/Hombres"
 import Mujeres from "./views/mujeres/Mujeres"
@@ -22,18 +20,18 @@ import Login from "./views/LogIn/Login"
 
 function App() {
   return (
-  <body className = "body">
+<body className = "body">
     <div className= "grid">
       {/* <header className="App-header"> */}
   <Router>
      <div className="router">
       <NavBar />
-      <ItemListContainer 
-      greeting = "Soy el greeting"/>
       <Header 
         titulo = "Tus nuevas Jordan te están esperando"
         subtitulo = "Podés encontrarlas en Drop It"
         />
+      
+      {/* greeting = "Soy el greeting"/> */}
        <Routes>
           <Route path= '/' element={<Home />}/> 
           <Route path= '/hombres' element={<Hombres />}/>
@@ -42,9 +40,9 @@ function App() {
           <Route path= '/login' element={<Login />}/>
           <Route path= '/detail/:id' element={<ItemDetail />}/>
        </Routes>
+     <ItemListContainer />
      </div>
 </Router>
-     
       {/* </header> */}
         
       {/* TARJETAS ESTÁTICAS
