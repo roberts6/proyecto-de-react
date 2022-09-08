@@ -7,10 +7,11 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 // Components
 import NavBar from "./components/navBar";
 import Header from "./components/header"
+//import ItemDetail from "./components/ItemDetail/ItemDetail"
+import ItemListContainer from "./components/ItemListContainer"
+import ItemDetailContainer from "./components/ItemDetailContainer"
 
 // Import views
-import ItemDetail from "./views/ItemDetail/ItemDetail"
-import Home from "./views/home/Home"
 import Hombres from "./views/hombres/Hombres"
 import Mujeres from "./views/mujeres/Mujeres"
 import Kids from "./views/kids/Kids"
@@ -32,12 +33,12 @@ function App() {
       {/* greeting = "Soy el greeting"/> */}
      
        <Routes>
-          <Route path= '/' element={<Home />}/> 
+          <Route path= '/' element={<ItemListContainer />}/> 
           <Route path= '/hombres' element={<Hombres />}/>
           <Route path= '/mujeres' element={<Mujeres />}/>
           <Route path= '/kids' element={<Kids />}/>
           <Route path= '/login' element={<Login />}/>
-          <Route path= '/detail/:id' element={<ItemDetail />}/>
+          <Route path= '/detail/:id' element={<ItemDetailContainer />}/>
        </Routes>
      </div>
 </Router>

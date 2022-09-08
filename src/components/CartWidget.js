@@ -4,8 +4,7 @@ import React from "react"
 const CartWidget = () => {
     return(
         <div className = "CartWidget">
-            {/*<i class="fa-thin fa-cart-shopping"></i>*/}
-             <ShoppingCartTwoToneIcon />
+            <ShoppingCartTwoToneIcon />
         </div>
     )
 }

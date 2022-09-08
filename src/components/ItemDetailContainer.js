@@ -1,31 +1,24 @@
 import React, {useEffect, useState} from 'react'
-import ItemDetail from './ItemDetail';
-import {link} from "react-router-dom"
+import ItemDetail from './ItemDetail/ItemDetail';
+import {useParams} from "react-router-dom"
+
 
 const ItemDetailContainer = () => {
-  const [items, setItems] = useState([])
-  useEffect (() => {
-    setTimeout(() => {
-      fetch('https://fakestoreapi.com/products')
-      .then(response => response.json())
-        .then(data => setItems(data))
-        .catch(err => console.error(err));  
-      }, 2000);
-  }, [])
+  const [item, setItem] = useState([]);
+let {id} = useParams();
 
-  return (
-    <div>
-      {items.map((item) => {
+useEffect(() => {    
+  setTimeout(() => {
+  fetch(`https://fakestoreapi.com/products/${id}`)
+  .then(response => response.json())
+    .then(data => setItem(data))
+    .catch(err => console.error(err));  
+  }, 2000);
+      },[id]);
+ 
 return (
-  <div key= {item.id}>
-    <link to= {`/detail/${item.id}`}>
       <ItemDetail data={item}/>
-    </link>
-  </div>
 )
-      })}
-    </div>
-  )
 }
 
 export default ItemDetailContainer

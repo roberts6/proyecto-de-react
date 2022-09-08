@@ -1,5 +1,3 @@
-import React, {useEffect, useState} from 'react'
-import {useParams} from "react-router-dom"
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
@@ -8,35 +6,24 @@ import Box from '@mui/material/Box';
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
-import ItemCount from "../../components/ItemCount"
+import ItemCount from "../ItemCount"
 
 
 
-const ItemDetail = () => {
-const [item, setItem] = useState([]);
-let {id} = useParams();
-
-useEffect(() => {    
-  setTimeout(() => {
-  fetch(`https://fakestoreapi.com/products/${id}`)
-  .then(response => response.json())
-    .then(data => setItem(data))
-    .catch(err => console.error(err));  
-  }, 2000);
-      },[id]);
+const ItemDetail = ({data}) => {
 
 return(
-  item ? 
+  data ? 
   <div className="contenedor-individual">
-   <div className = "individual" id= {item.id}>
+   <div className = "individual" id= {data.id}>
 			<CardActionArea>
-				<CardMedia component='img' image={item.image} alt='Producto' />
+				<CardMedia component='img' image={data.image} alt='Producto' />
 				<CardContent>
 					<Typography gutterBottom variant='h5' component='div'>
-						${item.price}
+						${data.price}
 					</Typography>
 					<Typography variant='body2' color='text.secondary'>
-						{item.description}
+						{data.description}
 					</Typography>
           <Divider variant="middle" />
       <Box sx={{ m: 2 }}>
