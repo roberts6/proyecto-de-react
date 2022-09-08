@@ -1,10 +1,10 @@
 import React from 'react'
-import ItemList from "../../components/ItemList"
+import ItemListContainer from "../../components/ItemListContainer"
 
 function home() {
   return (
     <div className="cards-products">
-      <ItemList />
+      <ItemListContainer />
     </div>
   )
 }

@@ -7,8 +7,6 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 // Components
 import NavBar from "./components/navBar";
 import Header from "./components/header"
-import ItemListContainer from "./components/ItemListContainer"
-import ItemList from "./components/ItemList"
 
 // Import views
 import ItemDetail from "./views/ItemDetail/ItemDetail"
@@ -32,6 +30,7 @@ function App() {
         />
       
       {/* greeting = "Soy el greeting"/> */}
+     
        <Routes>
           <Route path= '/' element={<Home />}/> 
           <Route path= '/hombres' element={<Hombres />}/>
@@ -40,7 +39,6 @@ function App() {
           <Route path= '/login' element={<Login />}/>
           <Route path= '/detail/:id' element={<ItemDetail />}/>
        </Routes>
-     <ItemListContainer />
      </div>
 </Router>
       {/* </header> */}
