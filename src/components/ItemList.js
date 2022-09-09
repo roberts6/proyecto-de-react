@@ -1,21 +1,8 @@
-//import React, {useEffect, useState} from 'react'
 import {Link} from "react-router-dom"
 import Item from "./CardComponent/Item"
 
 
-
-
 const ItemList = ({data}) => {
-	// const [Items, setItems] = useState([]);
-
-	// useEffect(() => {    
-    // setTimeout(() => {
-	//   fetch('https://fakestoreapi.com/products')
-	//   .then(response => response.json())
-    //   .then(data => setItems(data))
-    //   .catch(err => console.error(err));  
-    // }, 2000);
-    //     },[]);
 
 	return (
 <div className="cards">

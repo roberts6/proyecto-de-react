@@ -10,12 +10,14 @@ import Header from "./components/header"
 //import ItemDetail from "./components/ItemDetail/ItemDetail"
 import ItemListContainer from "./components/ItemListContainer"
 import ItemDetailContainer from "./components/ItemDetailContainer"
+import ItemCategoryContainer from "./components/ItemCategoryContainer"
 
 // Import views
-import Hombres from "./views/hombres/Hombres"
-import Mujeres from "./views/mujeres/Mujeres"
-import Kids from "./views/kids/Kids"
+// import Hombres from "./views/hombres/Hombres"
+// import Mujeres from "./views/mujeres/Mujeres"
+// import Kids from "./views/kids/Kids"
 import Login from "./views/LogIn/Login"
+
 
 function App() {
   return (
@@ -34,9 +36,10 @@ function App() {
      
        <Routes>
           <Route path= '/' element={<ItemListContainer />}/> 
-          <Route path= '/category/hombres' element={<Hombres />}/>
+          {/* <Route path= '/category/hombres' element={<Hombres />}/>
           <Route path= '/category/mujeres' element={<Mujeres />}/>
-          <Route path= '/category/kids' element={<Kids />}/>
+          <Route path= '/category/kids' element={<Kids />}/> */}
+          <Route path='/category/:category' element={<ItemCategoryContainer />}/>
           <Route path= '/login' element={<Login />}/>
           <Route path= '/detail/:id' element={<ItemDetailContainer />}/>
        </Routes>
