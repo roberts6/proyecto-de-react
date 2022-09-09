@@ -9,9 +9,9 @@ const NavBar = () => {
     <nav className = "barraNavegacion">
     <Link to = "/"><LogoDropIt /></Link> 
         <ul className = "opciones">
-              <Link to= "/hombres">Hombres</Link>
-              <Link to= "/mujeres">Mujeres</Link>
-              <Link to= "/kids">Niños</Link>
+              <Link to= "/category/hombres">Hombres</Link>
+              <Link to= "/category/mujeres">Mujeres</Link>
+              <Link to= "/category/kids">Niños</Link>
               <Link to= "/login">Login</Link>
         </ul>
     <CartWidget />

@@ -34,9 +34,9 @@ function App() {
      
        <Routes>
           <Route path= '/' element={<ItemListContainer />}/> 
-          <Route path= '/hombres' element={<Hombres />}/>
-          <Route path= '/mujeres' element={<Mujeres />}/>
-          <Route path= '/kids' element={<Kids />}/>
+          <Route path= '/category/hombres' element={<Hombres />}/>
+          <Route path= '/category/mujeres' element={<Mujeres />}/>
+          <Route path= '/category/kids' element={<Kids />}/>
           <Route path= '/login' element={<Login />}/>
           <Route path= '/detail/:id' element={<ItemDetailContainer />}/>
        </Routes>
