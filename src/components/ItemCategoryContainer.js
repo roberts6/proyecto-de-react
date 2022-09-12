@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import ItemListCategory from "./itemListCategory"
+import ItemListCategory from "./itemCategoryList"
 import { useParams } from "react-router-dom"
 
 function ItemCategoryContainer() {

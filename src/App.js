@@ -39,7 +39,7 @@ function App() {
           {/* <Route path= '/category/hombres' element={<Hombres />}/>
           <Route path= '/category/mujeres' element={<Mujeres />}/>
           <Route path= '/category/kids' element={<Kids />}/> */}
-          <Route path='/category/:category' element={<ItemCategoryContainer />}/>
+          <Route path='/category/:categoryId' element={<ItemCategoryContainer />}/>
           <Route path= '/login' element={<Login />}/>
           <Route path= '/detail/:id' element={<ItemDetailContainer />}/>
        </Routes>
