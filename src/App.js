@@ -5,12 +5,12 @@ import React from "react";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 
 // Components
-import NavBar from "./components/navBar";
+import NavBar from "./components/NavBar";
 import Header from "./components/header"
 //import ItemDetail from "./components/ItemDetail/ItemDetail"
 import ItemListContainer from "./components/ItemListContainer"
 import ItemDetailContainer from "./components/ItemDetailContainer"
-import ItemCategoryContainer from "./components/ItemCategoryContainer"
+import Cart from "./components/cart"
 
 // Import views
 // import Hombres from "./views/hombres/Hombres"
@@ -39,9 +39,10 @@ function App() {
           {/* <Route path= '/category/hombres' element={<Hombres />}/>
           <Route path= '/category/mujeres' element={<Mujeres />}/>
           <Route path= '/category/kids' element={<Kids />}/> */}
-          <Route path='/category/:categoryId' element={<ItemCategoryContainer />}/>
+          <Route path='/category/:categoryId' element={<ItemListContainer />}/>
           <Route path= '/login' element={<Login />}/>
           <Route path= '/detail/:id' element={<ItemDetailContainer />}/>
+          <Route path= '/cart' element={<Cart />}/>
        </Routes>
      </div>
 </Router>

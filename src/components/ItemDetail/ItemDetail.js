@@ -7,14 +7,18 @@ import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
 import ItemCount from "../ItemCount"
+import { useState } from 'react';
 
 
 
 const ItemDetail = ({data}) => {
+  const [purchase, setPurchase] = useState(true)
+  console.log("esta es la compra",purchase);
+  
 
 return(
-  data ? 
-  <div className="contenedor-individual">
+  // data ? 
+<div className="contenedor-individual">
    <div className = "individual" id= {data.id}>
 			<CardActionArea>
 				<CardMedia component='img' image={data.image} alt='Producto' />
@@ -39,15 +43,15 @@ return(
           <Chip label="XXLarge" />
         </Stack>
         <Box sx={{ mt: 3, ml: 1, mb: 1 }}>
-          <ItemCount />
       </Box>
+          <ItemCount stock={4} setPurchase={true} name={data.title} />
       </Box>
 				</CardContent>
 			</CardActionArea>
 	</div>
 
-  </div>
-  : null
+</div>
+  // : null
 )
 }
 
