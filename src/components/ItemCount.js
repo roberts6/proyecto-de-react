@@ -5,7 +5,9 @@ import { Link } from "react-router-dom"
 import {ItemContext} from "./CartContext"
 
 
+
 const ItemCount = ({stock, setPurchase, name}) => {
+  const [data, setData] = useContext(ItemContext)
     const [initial, setInitial] = useState(0);
     const onAdd = () => {
         return initial < stock ? setInitial(initial + 1) : Swal.fire({
@@ -35,18 +37,6 @@ console.log("este es el set",setPurchase);
         })
     }
 
-    const AddItem = ({name}) => {
-      // const [data, setData] = useContext(ItemContext)
-      // return(
-      //   initial
-      // )
-      const [cart, setCart] = useState([])
-
-      setCart(name)
-
-      console.log(cart);
-      
-    }
     
     // initial > 0 ? setPurchase = false : setPurchase = true;
 
@@ -62,7 +52,7 @@ console.log("este es el set",setPurchase);
           </div>  
           <Link to="/cart">
             {/* <button className= "botonAnadir" onClick= {()=>setData(AddItem)}>Añadir al carrito</button> */}
-            <button className= "botonAnadir" onClick={() => AddItem()}>Añadir al carrito</button>
+            <button className= "botonAnadir">Añadir al carrito</button>
           </Link>
         </div>
         )

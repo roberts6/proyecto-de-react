@@ -7,7 +7,7 @@ import {ItemContext} from "./CartContext"
 // const ItemList = ({data}) => {
 	const ItemList = () => {
 
-	const [data, setData, status] = useContext(ItemContext)
+	const [data, status] = useContext(ItemContext)
 
 //console.log("qué trae el Context", data);
 console.log("este es el estatus: ", status);
