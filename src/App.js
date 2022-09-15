@@ -11,6 +11,7 @@ import Header from "./components/header"
 import ItemListContainer from "./components/ItemListContainer"
 import ItemDetailContainer from "./components/ItemDetailContainer"
 import Cart from "./components/cart"
+import { ApiProvider } from "./components/CartContext"
 
 // Import views
 // import Hombres from "./views/hombres/Hombres"
@@ -22,6 +23,7 @@ import Login from "./views/LogIn/Login"
 function App() {
   return (
 <body className = "body">
+  <ApiProvider>
     <div className= "grid">
       {/* <header className="App-header"> */}
   <Router>
@@ -133,7 +135,7 @@ Forro: Poliéster 100%"
 
        </div> */}  
     </div>
-   
+    </ApiProvider>
     </body>
   );
 }

@@ -1,7 +1,8 @@
-import React, {useState} from "react"
+import React, {useState, useContext} from "react"
 //import SinEstock from "../img/empty-storage.jpeg"
 import Swal from 'sweetalert2'
 import { Link } from "react-router-dom"
+import {ItemContext} from "./CartContext"
 
 
 const ItemCount = ({stock, setPurchase, name}) => {
@@ -34,7 +35,20 @@ console.log("este es el set",setPurchase);
         })
     }
 
-    initial > 0 ? setPurchase = false : setPurchase = true;
+    const AddItem = ({name}) => {
+      // const [data, setData] = useContext(ItemContext)
+      // return(
+      //   initial
+      // )
+      const [cart, setCart] = useState([])
+
+      setCart(name)
+
+      console.log(cart);
+      
+    }
+    
+    // initial > 0 ? setPurchase = false : setPurchase = true;
 
     if (setPurchase) {
       return ( 
@@ -47,14 +61,16 @@ console.log("este es el set",setPurchase);
             <button onClick={onSubstract}>-</button>
           </div>  
           <Link to="/cart">
-            <button className= "botonAnadir">Añadir al carrito</button>
+            {/* <button className= "botonAnadir" onClick= {()=>setData(AddItem)}>Añadir al carrito</button> */}
+            <button className= "botonAnadir" onClick={() => AddItem()}>Añadir al carrito</button>
           </Link>
         </div>
         )
     } else {
+      console.log("este es el nuevo estado de set",setPurchase);
       return null
     }
-    
+
 }
 
 export default ItemCount;
