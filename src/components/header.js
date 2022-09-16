@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
 import "./header.css"
 import img from "../img/zapatillaColorIcono.svg"
-import {useItemContext} from "./CartContext"
+import {ItemContext} from "./CartContext"
 
 const Header = ({titulo, subtitulo}) => {
-  const [data, setData] = useContext(useItemContext)
+  const [data, setData] = useContext(ItemContext)
   return (
     <div className = "banner">
       <p>Productos en tienda: {data.length}</p>

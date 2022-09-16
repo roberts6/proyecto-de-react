@@ -2,13 +2,13 @@ import React, {useState, useEffect, useContext} from "react"
 //import SinEstock from "../img/empty-storage.jpeg"
 import Swal from 'sweetalert2'
 import { Link } from "react-router-dom"
-//import {useItemContext} from "./CartContext"
+import {ItemContext} from "./CartContext"
 import { data } from "browserslist";
 
 
 
 const ItemCount = ({stock, setPurchase, name, onCart, initial }) => {
-  //const { AddItem } = useContext(useItemContext)
+  const { AddItem } = useContext(ItemContext)
     const [count, setCount] = useState(initial);
     const onAdd = () => {
         return count < stock ? setCount(count + 1) : Swal.fire({

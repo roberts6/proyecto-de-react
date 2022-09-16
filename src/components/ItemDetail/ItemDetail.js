@@ -8,7 +8,7 @@ import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
 import ItemCount from "../ItemCount"
 import React, { useState, useContext } from 'react';
-import {useItemContext} from "../CartContext"
+import {ItemContext} from "../CartContext"
 
 
 
@@ -17,7 +17,7 @@ const ItemDetail = ({data, stock}) => {
 
     const [purchase, setPurchase] = useState(false)
     console.log("esta es la compra",purchase);
-    const {AddItem} = useContext(useItemContext)
+    const {AddItem} = useContext(ItemContext)
 
     const onCart = (quantity) => {
       alert(`Se agrego: ${quantity}  ${data.title}`);

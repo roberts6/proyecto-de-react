@@ -1,8 +1,8 @@
-import React, { createContext, useEffect, useState, useContext } from "react"
+import React, { createContext, useEffect, useState } from "react"
 
- const ItemContext = createContext([]); //revisar el [] --> como estoy usando "useItemContext" ya no hace falta que importe a useItemContext
+export const ItemContext = createContext([]); //revisar el [] --> como estoy usando "useItemContext" ya no hace falta que importe a useItemContext
 
- export const useItemContext = () => useContext(useItemContext) // de esta forma cada vez que importe el cotext a un componente no tengo que estar importando el useContext y el context propiamente dicho
+ // const useItemContext = () => useContext(useItemContext) // de esta forma cada vez que importe el cotext a un componente no tengo que estar importando el useContext y el context propiamente dicho
 
 
  export const ApiProvider = ({ children }) => {
@@ -65,9 +65,9 @@ return cartList.find(product => product.id === id) ? true : false
 }
 
 return(
-    <useItemContext.Provider value={[data, setData, status, AddItem, RemoveItem, Clear, isInCart  ]}>
+    <ItemContext.Provider value={[data, setData, status, AddItem, RemoveItem, Clear, isInCart  ]}>
         {children}
-    </useItemContext.Provider>
+    </ItemContext.Provider>
 )
         }
 

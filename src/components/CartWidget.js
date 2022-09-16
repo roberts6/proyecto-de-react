@@ -1,10 +1,9 @@
 import ShoppingCartTwoToneIcon from '@mui/icons-material/ShoppingCartTwoTone';
-import React, {useContext} from "react"
-import {useItemContext} from "./CartContext"
+import React from "react"
+
 
 
 const CartWidget = () => {
-    const [data, setData] = useContext(useItemContext)
         return(
         <div className = "CartWidget">
             <ShoppingCartTwoToneIcon />
