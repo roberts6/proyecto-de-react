@@ -1,16 +1,17 @@
-import React, {useState, useContext} from "react"
+import React, {useState, useEffect, useContext} from "react"
 //import SinEstock from "../img/empty-storage.jpeg"
 import Swal from 'sweetalert2'
 import { Link } from "react-router-dom"
-import {ItemContext} from "./CartContext"
+//import {useItemContext} from "./CartContext"
+import { data } from "browserslist";
 
 
 
-const ItemCount = ({stock, setPurchase, name}) => {
-  const [data, setData] = useContext(ItemContext)
-    const [initial, setInitial] = useState(0);
+const ItemCount = ({stock, setPurchase, name, onCart, initial }) => {
+  //const { AddItem } = useContext(useItemContext)
+    const [count, setCount] = useState(initial);
     const onAdd = () => {
-        return initial < stock ? setInitial(initial + 1) : Swal.fire({
+        return count < stock ? setCount(count + 1) : Swal.fire({
           icon: "warning",
           title: `No hay más stock de ${name}`,
           text: 'Lo sentimos :(',
@@ -20,13 +21,14 @@ const ItemCount = ({stock, setPurchase, name}) => {
           imageAlt: 'Sin Stock',
           setPurchase: false
         })
+        
     }
 
-console.log("este es el set",setPurchase);
+//console.log("este es el set",setPurchase);
 
 
     const onSubstract = () => {
-        return initial > 0 ? setInitial(initial - 1) : Swal.fire({
+        return count > 0 ? setCount(count - 1) : Swal.fire({
           icon: "error",
           title: 'Tu carrito está vacío!',
           text: 'No agregaste nada aún',
@@ -37,23 +39,26 @@ console.log("este es el set",setPurchase);
         })
     }
 
-    
+ useEffect(() => {
+   setCount(parseInt(initial))
+ },[initial])
+
     // initial > 0 ? setPurchase = false : setPurchase = true;
 
     if (setPurchase) {
       return ( 
         <div className= "handlerCart">
             <p className="state">
-                {initial}
+                {count}
             </p>
           <div className="handlerButtons">  
             <button onClick={onAdd}>+</button>
             <button onClick={onSubstract}>-</button>
           </div>  
-          <Link to="/cart">
+          {/* <Link to="/cart"> */}
             {/* <button className= "botonAnadir" onClick= {()=>setData(AddItem)}>Añadir al carrito</button> */}
-            <button className= "botonAnadir">Añadir al carrito</button>
-          </Link>
+            <button className= "botonAnadir" disabled={count <= 0 || count >= stock + 1 } onClick={() => onCart(count)}>Añadir al carrito</button>
+          {/* </Link> */}
         </div>
         )
     } else {

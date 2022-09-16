@@ -18,7 +18,7 @@ useEffect(() => {
       },[id]);
  
 return (
-      <ItemDetail data={item}/>
+      <ItemDetail data={item} stock={4}/>
 )
 }
 
