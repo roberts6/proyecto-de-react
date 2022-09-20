@@ -11,7 +11,7 @@ import Header from "./components/header"
 import ItemListContainer from "./components/ItemListContainer"
 import ItemDetailContainer from "./components/ItemDetailContainer"
 import Cart from "./components/cart"
-import { ApiProvider } from "./components/CartContext"
+import { ApiProvider } from "./CartContext"
 
 // Import views
 // import Hombres from "./views/hombres/Hombres"

@@ -2,7 +2,7 @@ import React, {useState, useEffect, useContext} from "react"
 //import SinEstock from "../img/empty-storage.jpeg"
 import Swal from 'sweetalert2'
 import { Link } from "react-router-dom"
-import {ItemContext} from "./CartContext"
+import {ItemContext} from "../CartContext"
 import { data } from "browserslist";
 
 
@@ -62,7 +62,7 @@ const ItemCount = ({stock, setPurchase, name, onCart, initial }) => {
         </div>
         )
     } else {
-      console.log("este es el nuevo estado de set",setPurchase);
+      //console.log("este es el nuevo estado de set",setPurchase);
       return null
     }
 

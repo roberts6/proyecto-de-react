@@ -10,25 +10,25 @@ export const ItemContext = createContext([]); //revisar el [] --> como estoy usa
     const [status, setStatus] = useState("initial");
     const [data, setData] = useState([]);
 
-    useEffect(() => {    
-        fetchData();
-            },[]);
+//     useEffect(() => {    
+//         fetchData();
+//             },[]);
 
-// lógica del fetch con el setTimeOut
-const fetchData = async () => {
-try {
-    const getData = await setTimeout(() => {
-        fetch('https://fakestoreapi.com/products')
-        .then(response => response.json())
-        .then(data => setData(data)) 
-      }, 2000);
-      setStatus("done");
-      setData(getData);
+// // lógica del fetch con el setTimeOut
+// const fetchData = async () => {
+// try {
+//     const getData = await setTimeout(() => {
+//         fetch('https://fakestoreapi.com/products')
+//         .then(response => response.json())
+//         .then(data => setData(data)) 
+//       }, 2000);
+//       setStatus("done");
+//       setData(getData);
   
-} catch (error) {
-    setStatus("error");
-}
-}
+// } catch (error) {
+//     setStatus("error");
+// }
+// }
 
 const AddItem = (item, quantity) => {
     // const newCart = cartList.filter(product => product.id !== item.id )

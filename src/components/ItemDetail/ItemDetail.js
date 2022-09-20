@@ -8,7 +8,7 @@ import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
 import ItemCount from "../ItemCount"
 import React, { useState, useContext } from 'react';
-import {ItemContext} from "../CartContext"
+import {ItemContext} from "../../CartContext"
 
 
 

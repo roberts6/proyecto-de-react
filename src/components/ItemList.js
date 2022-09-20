@@ -1,16 +1,15 @@
 import {Link} from "react-router-dom"
 import Item from "./CardComponent/Item"
 import React, {useContext} from "react"
-import {ItemContext} from "./CartContext"
+import {ItemContext} from "../CartContext"
 
 
-// const ItemList = ({data}) => {
-	const ItemList = () => {
+const ItemList = ({data}) => {
+	//const ItemList = () => {
 
-	const [data, status] = useContext(ItemContext)
+	//const [data, status] = useContext(ItemContext)
 
-//console.log("qué trae el Context", data);
-console.log("este es el estatus: ", status);
+//console.log("este es el estatus: ", status);
 
 	return (
 <div className="cards">
