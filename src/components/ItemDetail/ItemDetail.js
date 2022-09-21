@@ -7,8 +7,8 @@ import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
 import ItemCount from "../ItemCount"
-import React, { useState, useContext } from 'react';
-import {ItemContext} from "../../CartContext"
+import React, { useState } from 'react';
+import {useItemContext} from "../../CartContext"
 
 
 
@@ -17,13 +17,14 @@ const ItemDetail = ({data, stock}) => {
 
     const [purchase, setPurchase] = useState(false)
     console.log("esta es la compra",purchase);
-    const {AddItem} = useContext(ItemContext)
+    const {AddItem} = useItemContext()
 
     const onCart = (quantity) => {
       alert(`Se agrego: ${quantity}  ${data.title}`);
-      setPurchase(true);
       AddItem(data ,quantity)
+      setPurchase(true);
     };
+
     
     
     return(

@@ -1,8 +1,11 @@
-import React, { createContext, useEffect, useState } from "react"
+import React, { createContext, useEffect, useState, useContext } from "react"
 
-export const ItemContext = createContext([]); //revisar el [] --> como estoy usando "useItemContext" ya no hace falta que importe a useItemContext
+const ItemContext = createContext([]); // --> ya no lo exporto porque ahora uso useItemContext que es mi hook customizado
 
- // const useItemContext = () => useContext(useItemContext) // de esta forma cada vez que importe el cotext a un componente no tengo que estar importando el useContext y el context propiamente dicho
+ export const useItemContext = () => {
+const ItemContextData = useContext(ItemContext)
+return ItemContextData
+ } // de esta forma cada vez que importe el cotext a un componente no tengo que estar importando el useContext y el context propiamente dicho
 
 
  export const ApiProvider = ({ children }) => {
@@ -30,24 +33,22 @@ export const ItemContext = createContext([]); //revisar el [] --> como estoy usa
 // }
 // }
 
-const AddItem = (item, quantity) => {
-    // const newCart = cartList.filter(product => product.id !== item.id )
-    // newCart.push({...item, newQuantity } );
-    // setCartList(newCart)
-    // console.log(cartList);
-
+const AddItem = (data, quantity) => {
     // creo un nuevo array. Si existe el producto le suma cantidad y sino creo un nuevo objeto. --> REVISAR!
     let newCart;
-    let product = cartList.find(product => product.id === item.id);
+    let product = cartList.find(product => product.id === data.id);
     if (product) {
         product.quantity += quantity;
         newCart = [...cartList]
     } else {
-        product = {...item, quantity: quantity};
+        product = {...data, quantity: quantity};
         newCart = [...cartList, product]
     }
  setCartList(newCart)
+ console.log("mi newCrt es: ",newCart);
+ 
 }
+
 
 // traigo todos los id que no sean el que paso por parámetro
 const RemoveItem = (id) => {
@@ -65,9 +66,10 @@ return cartList.find(product => product.id === id) ? true : false
 }
 
 return(
-    <ItemContext.Provider value={[data, setData, status, AddItem, RemoveItem, Clear, isInCart  ]}>
+    <ItemContext.Provider value={ {data, setData, status, AddItem, RemoveItem, Clear, isInCart} }>
         {children}
     </ItemContext.Provider>
 )
         }
+
 

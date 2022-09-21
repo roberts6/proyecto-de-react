@@ -1,14 +1,12 @@
-import React, {useState, useEffect, useContext} from "react"
+import React, {useState, useEffect} from "react"
 //import SinEstock from "../img/empty-storage.jpeg"
 import Swal from 'sweetalert2'
 import { Link } from "react-router-dom"
-import {ItemContext} from "../CartContext"
 import { data } from "browserslist";
 
 
 
 const ItemCount = ({stock, setPurchase, name, onCart, initial }) => {
-  const { AddItem } = useContext(ItemContext)
     const [count, setCount] = useState(initial);
     const onAdd = () => {
         return count < stock ? setCount(count + 1) : Swal.fire({
@@ -56,7 +54,6 @@ const ItemCount = ({stock, setPurchase, name, onCart, initial }) => {
             <button onClick={onSubstract}>-</button>
           </div>  
           {/* <Link to="/cart"> */}
-            {/* <button className= "botonAnadir" onClick= {()=>setData(AddItem)}>Añadir al carrito</button> */}
             <button className= "botonAnadir" disabled={count <= 0 || count >= stock + 1 } onClick={() => onCart(count)}>Añadir al carrito</button>
           {/* </Link> */}
         </div>
