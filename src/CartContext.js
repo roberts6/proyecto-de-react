@@ -46,7 +46,6 @@ const AddItem = (data, quantity) => {
     }
  setCartList(newCart)
  console.log("mi newCrt es: ",newCart);
- 
 }
 
 
@@ -65,8 +64,23 @@ const isInCart = (id) => {
 return cartList.find(product => product.id === id) ? true : false
 }
 
+// creo un acumulador y le paso la cantidad de objetos que añadí
+const totalProductsCart = () => {
+    return(
+            cartList.reduce((acumulador, productoActual) => acumulador + productoActual.quantity, 0 )
+    )
+}
+
+// seteo un estado "previous" en 0 y le voy agregando el resutaldo de cantidad x precio
+const totalPriceCart = () => {
+return (
+    cartList.reduce((previous, actual) => previous + actual.quantity * actual.price, 0 )
+)
+}
+
+
 return(
-    <ItemContext.Provider value={ {data, setData, status, AddItem, RemoveItem, Clear, isInCart} }>
+    <ItemContext.Provider value={ {data, setData, status, AddItem, RemoveItem, Clear, isInCart, totalProductsCart, totalPriceCart, cartList } }>
         {children}
     </ItemContext.Provider>
 )
