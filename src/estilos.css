@@ -47,6 +47,9 @@
 
 .CartWidget p{
   margin: 1vw;
+}
+
+.CartWidget a{
   text-decoration: none;
 }
 
