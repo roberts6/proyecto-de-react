@@ -46,8 +46,8 @@ const ItemCount = ({stock, setPurchase, name, onCart, initial }) => {
                 {count}
             </p>
           <div className="handlerButtons">  
-            <button onClick={onAdd}>+</button>
             <button onClick={onSubstract}>-</button>
+            <button onClick={onAdd}>+</button>
           </div>  
             <button className= "botonAnadir" disabled={count <= 0 || count >= stock + 1 } onClick={() => onCart(count)}>Añadir al carrito</button>
         </div>
