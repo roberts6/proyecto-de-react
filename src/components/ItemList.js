@@ -4,11 +4,6 @@ import React from "react"
 
 
 const ItemList = ({data}) => {
-	//const ItemList = () => {
-
-	//const [data, status] = useContext(ItemContext)
-
-//console.log("este es el estatus: ", status);
 
 	return (
 <div className="cards">

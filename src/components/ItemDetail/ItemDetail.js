@@ -16,7 +16,7 @@ import {useItemContext} from "../../CartContext"
 const ItemDetail = ({data, stock}) => {
 
     const [purchase, setPurchase] = useState(false)
-    console.log("esta es la compra",purchase);
+    //console.log("esta es la compra",purchase);
     const {AddItem} = useItemContext()
 
     const onCart = (quantity) => {

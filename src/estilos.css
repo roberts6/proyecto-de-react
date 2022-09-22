@@ -155,3 +155,22 @@
   div h1{
       color: white;
   }
+
+  .cart{
+    color: white;
+    margin: 3vw 1vw;
+    display: flex;
+  }
+
+  .cart img{
+    width: 10vw;
+  }
+
+  .cart-description {
+    margin-left: 2vw;
+  }
+
+  .cart-empty {
+    display: flex;
+    flex-direction: column;
+  }

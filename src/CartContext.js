@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState, useContext } from "react"
+import React, { createContext, useState, useContext } from "react"
 
 const ItemContext = createContext([]); // --> ya no lo exporto porque ahora uso useItemContext que es mi hook customizado
 
@@ -45,7 +45,7 @@ const AddItem = (data, quantity) => {
         newCart = [...cartList, product]
     }
  setCartList(newCart)
- console.log("mi newCrt es: ",newCart);
+ //console.log("mi newCrt es: ",newCart);
 }
 
 
@@ -80,7 +80,7 @@ return (
 
 
 return(
-    <ItemContext.Provider value={ {data, setData, status, AddItem, RemoveItem, Clear, isInCart, totalProductsCart, totalPriceCart, cartList } }>
+    <ItemContext.Provider value={ {data, setData, status, setStatus, AddItem, RemoveItem, Clear, isInCart, totalProductsCart, totalPriceCart, cartList } }>
         {children}
     </ItemContext.Provider>
 )

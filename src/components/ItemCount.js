@@ -1,8 +1,6 @@
 import React, {useState, useEffect} from "react"
-//import SinEstock from "../img/empty-storage.jpeg"
 import Swal from 'sweetalert2'
-import { Link } from "react-router-dom"
-import { data } from "browserslist";
+
 
 
 
@@ -13,7 +11,6 @@ const ItemCount = ({stock, setPurchase, name, onCart, initial }) => {
           icon: "warning",
           title: `No hay más stock de ${name}`,
           text: 'Lo sentimos :(',
-          //imageUrl: <img src= "src/components/img/empty-storage.jpeg" alt= "Sin Stock" />,
           imageWidth: 400,
           imageHeight: 200,
           imageAlt: 'Sin Stock',
@@ -30,7 +27,6 @@ const ItemCount = ({stock, setPurchase, name, onCart, initial }) => {
           icon: "error",
           title: 'Tu carrito está vacío!',
           text: 'No agregaste nada aún',
-          //imageUrl: './components/img/empty-storage.jpeg',
           imageWidth: 400,
           imageHeight: 200,
           imageAlt: 'Carrito vacío',
@@ -53,13 +49,11 @@ const ItemCount = ({stock, setPurchase, name, onCart, initial }) => {
             <button onClick={onAdd}>+</button>
             <button onClick={onSubstract}>-</button>
           </div>  
-          {/* <Link to="/cart"> */}
             <button className= "botonAnadir" disabled={count <= 0 || count >= stock + 1 } onClick={() => onCart(count)}>Añadir al carrito</button>
-          {/* </Link> */}
         </div>
         )
     } else {
-      //console.log("este es el nuevo estado de set",setPurchase);
+      ////console.log("este es el nuevo estado de set",setPurchase);
       return null
     }
 
