@@ -4,7 +4,7 @@ import ItemList from "./ItemList"
 
 
 // Firebase métodos
-import { collection, query, getDocs } from "firebase/firestore"
+import { collection, query, getDocs, where } from "firebase/firestore"
 
 import {Db} from "../firebase/FirebaseConfig"
 
@@ -39,7 +39,8 @@ import {Db} from "../firebase/FirebaseConfig"
 const ItemListContainer = () => {
     const [Items, setItems] = useState([]);
     const getSneaker = async () => { // --> firebase trae un await, por eso hay que meterlo dentro de una función asíncrona
-        const q = query(collection(Db, "Sneakers")) // traigo mi base de datos (db) y el nombre que le di en firebase
+        const q = query(collection(Db, "Sneakers"), where("genre", "==", "mujer")) // traigo mi base de datos (db) y el nombre que le di en firebase
+        // dentro de query y separado por , se agrega where("clave", "==", "valor") --> esto es un filtro
         const docs = [];
         const querySnapshot = await getDocs(q);
         querySnapshot.forEach((doc) => {
