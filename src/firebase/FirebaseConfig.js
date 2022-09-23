@@ -19,3 +19,4 @@ const app = initializeApp(firebaseConfig);
 
 // esta constante "Db" (data base) recibe todo el archivo de configuración y lo exporto para ser usado en los componentes que sea necesario.
 export const Db = getFirestore(app);
+// como no hago un export default a la hora de importarlo debo colocarlo entre { }

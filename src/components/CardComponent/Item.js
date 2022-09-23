@@ -15,14 +15,28 @@ const Item = ({ data }) => {
 			<CardActionArea>
 				<CardMedia component='img' image={data.image} alt='Producto' />
 				<CardContent>
+					<div className = "model">
+					<Typography variant='body2' color='text.secondary'>
+						{data.model}
+					</Typography>
+					</div>
+					<div className= "name">
+					<Typography variant='body2' color='text.secondary'>
+						{data.name} 
+					</Typography>
+					</div>
+					<div className= "name">
+					<Typography variant='body2' color='text.secondary'>
+					     {data.genre}
+					</Typography>
+					</div>
+					<div className = "style">
+					<Typography variant='body2' color='text.secondary'>
+						Estilo: {data.style}
+					</Typography>
+					</div>
 					<Typography gutterBottom variant='h5' component='div'>
 						${data.price}
-					</Typography>
-					<Typography variant='body2' color='text.secondary'>
-						{data.category}
-					</Typography>
-					<Typography variant='body2' color='text.secondary'>
-						{data.title}
 					</Typography>
 				</CardContent>
 			</CardActionArea>
