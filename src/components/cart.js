@@ -26,14 +26,14 @@ const Cart = () => {
           <p>Producto: ${product.title}</p>
              <p>Precio unitario: ${product.price}</p>
              <p>Cantidad seleccionada: {product.quantity}</p>
-             <p>precio total: ${product.price * product.quantity}</p>
+             <p className="precioTotalArticulo">Precio total: ${product.price * product.quantity}</p>
              <button onClick={() => RemoveItem(product.id)}>Eliminar</button>
           </div>   
         </div>     
       </div>
           ) 
         },
-        console.log("el totalPriceCart es = ", totalPriceCart())
+        console.log("el totalPriceCart es = $", totalPriceCart())
         )
         
         )
