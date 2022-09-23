@@ -175,6 +175,7 @@
     color: white;
     margin: 3vw 1vw;
     display: flex;
+    align-items: center;
     width: 55vw;
   }
 
@@ -190,4 +191,9 @@
   .cart-empty {
     display: flex;
     flex-direction: column;
+  }
+
+  .precioTotal{
+    color: white;
+    font-size: 3vw;
   }
