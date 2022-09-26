@@ -1,11 +1,17 @@
 import {Link} from "react-router-dom"
 import Item from "./CardComponent/Item"
 import React from "react"
+import Filter from "./Filter"
 
 
 const ItemList = ({data}) => {
-
+    
+	
 	return (
+<>
+<div className = "filtro">
+	<Filter data = {data} />
+</div>
 <div className="cards">
 	{data? data.map ((item) => {
 return(
@@ -17,6 +23,7 @@ return(
 )
 	}) : null}
 </div> 
+</>
 	);
 };
 
