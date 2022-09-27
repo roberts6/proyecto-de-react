@@ -17,7 +17,8 @@ const Cart = () => {
     )
   } else{
     return (
-      cartList.map ((product) => { 
+      <>
+      {cartList.map ((product) => { 
         return(
       <div key={product.id} className = "cards-individual-fetch">
         <div className= "cart">
@@ -35,7 +36,9 @@ const Cart = () => {
         },
         console.log("el totalPriceCart es = $", totalPriceCart())
         )
-        
+      }
+      <div>El monto total a pagar es de: ${totalPriceCart()}</div>
+      </>
         )
       }
     }
