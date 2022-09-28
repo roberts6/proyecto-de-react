@@ -46,6 +46,10 @@
   margin: 1vw;
 }
 
+fieldset .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+  border-color: red;
+}
+
 .CartWidget p{
   margin: 1vw;
 }
@@ -269,8 +273,4 @@ margin-bottom: 0.2vw;
     border: 0;
     vertical-align: top;
     width: 100%;
-}
-
-.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
-  border-color: white;
 }

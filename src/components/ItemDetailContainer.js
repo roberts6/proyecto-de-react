@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import ItemDetail from './ItemDetail/ItemDetail';
-//import {useParams} from "react-router-dom"
+import {useParams} from "react-router-dom"
 
 
 // LLAMADA A LA API
@@ -24,7 +24,7 @@ import ItemDetail from './ItemDetail/ItemDetail';
 
 
 // Firebase métodos
-import { collection, query, getDocs } from "firebase/firestore"
+import { collection, query, getDocs, where, documentId } from "firebase/firestore"
 
 import {Db} from "../firebase/FirebaseConfig"
 
@@ -32,24 +32,28 @@ import {Db} from "../firebase/FirebaseConfig"
 // aplicación de la llamada a Firebase
 const ItemDetailContainer = () => {
   const [Item, setItem] = useState([]);
-  const getSneaker = async () => { // --> firebase trae un await, por eso hay que meterlo dentro de una función asíncrona
-      const q = query(collection(Db, "Sneakers")) // traigo mi base de datos (db) y el nombre que le di en firebase
-      const docs = [];
-      const querySnapshot = await getDocs(q);
-      querySnapshot.forEach((doc) => {
-     // console.log(doc.id, " => ", doc.data()); --> queda el id por fuera de mi objeto      
-     docs.push({...doc.data(),id: doc.id}) // --> de esta manera sumo el id a cada doc.data()
-  }) 
-  setItem(docs); 
-  }
+  console.log("este es mi item",Item);
+  
 
+  let { id } = useParams()
+  
 useEffect(() => {
+  const getSneaker = async () => { // --> firebase trae un await, por eso hay que meterlo dentro de una función asíncrona
+    const q = query(collection(Db, "Sneakers"), where(documentId(), "==", id)) // traigo mi base de datos (db) y el nombre que le di en firebase
+    const docs = [];
+    const querySnapshot = await getDocs(q);
+    querySnapshot.forEach((doc) => {
+   // console.log(doc.id, " => ", doc.data()); --> queda el id por fuera de mi objeto      
+   docs.push({...doc.data(),id: doc.id}) // --> de esta manera sumo el id a cada doc.data()
+}) 
+setItem(docs); 
+}
       getSneaker(); // la llamo para que se ejecute
-  },[]); // --> ,[] al cerrar el useEffect para que no se ejecute infinitamente
+  },[id]); // --> ,[] al cerrar el useEffect para que no se ejecute infinitamente
   
 
   return ( 
-    <ItemDetail data={Item} />
+    <ItemDetail data={Item} />  
   )
 }
 
