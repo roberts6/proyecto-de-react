@@ -1,7 +1,7 @@
 import React from 'react'
 import { useItemContext } from '../CartContext';
 import {Link} from "react-router-dom"
-import JordanIcono from "../img/JordanIcono.svg"
+import JordanIcono from "../img/LogoJordanRojo.svg"
 
 
 const Cart = () => {
