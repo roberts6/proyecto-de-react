@@ -225,6 +225,8 @@ color:white;
   .cart-empty {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin-top: 5vw;
   }
 
   .cart-empty a {

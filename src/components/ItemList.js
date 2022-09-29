@@ -5,8 +5,6 @@ import Filter from "./Filter"
 
 
 const ItemList = ({data}) => {
-    
-	
 	return (
 <>
 <div className = "filtro">

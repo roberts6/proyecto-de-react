@@ -17,6 +17,7 @@ import { ApiProvider } from "./CartContext"
 // import Mujeres from "./views/mujeres/Mujeres"
 // import Kids from "./views/kids/Kids"
 import Login from "./views/LogIn/Login"
+import Category from "./views/Category/Category"
 
 
 function App() {
@@ -40,7 +41,7 @@ function App() {
           {/* <Route path= '/category/hombres' element={<Hombres />}/>
           <Route path= '/category/mujeres' element={<Mujeres />}/>
           <Route path= '/category/kids' element={<Kids />}/> */}
-          <Route path='/category/:categoryId' element={<ItemListContainer />}/>
+          <Route path='/category/:genre' element={<Category />}/>
           <Route path= '/login' element={<Login />}/>
           <Route path= '/detail/:id' element={<ItemDetailContainer />}/>
           <Route path= '/cart' element={<Cart />}/>
