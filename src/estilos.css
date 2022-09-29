@@ -59,8 +59,13 @@ fieldset .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
 }
 
 .opciones a{
-    margin: 1vw;
+    margin: 1vw 2vw;
     text-decoration: none;
+    color: white;
+}
+
+.opciones a:hover{
+  font-weight: 700;
 }
 
 .itemList{
@@ -169,7 +174,7 @@ color:white;
   }
   
   div .MuiCardContent-root{
-    max-height: 30vh;
+    max-height: 60vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -220,6 +225,20 @@ color:white;
   .cart-empty {
     display: flex;
     flex-direction: column;
+  }
+
+  .cart-empty a {
+    color: yellow;
+    font-size: 2.5vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 35vw;
+  }
+
+  .cart-empty a img {
+    width: 10vw;
   }
 
   .precioTotal{
@@ -273,4 +292,10 @@ margin-bottom: 0.2vw;
     border: 0;
     vertical-align: top;
     width: 100%;
+}
+
+.total-a-pagar{
+    text-align: center;
+    color: white;
+    margin-top: 6vw;
 }

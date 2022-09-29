@@ -1,6 +1,7 @@
 import React from 'react'
 import { useItemContext } from '../CartContext';
 import {Link} from "react-router-dom"
+import JordanIcono from "../img/JordanIcono.svg"
 
 
 const Cart = () => {
@@ -12,7 +13,7 @@ const Cart = () => {
     return(
       <div className = "cart-empty">
       <h1>No hay nada en tu carrito :(</h1>
-      <Link to= "/">Vamos a comprar!!</Link>
+      <Link to= "/">Vamos a comprar!! <img src={JordanIcono} className="logo-navbar" alt="logo" /> </Link>
     </div>
     )
   } else{
@@ -24,7 +25,7 @@ const Cart = () => {
         <div className= "cart">
              <img src={product.image} alt= {product.title}/>
           <div className= "cart-description">
-          <p>Producto: ${product.title}</p>
+          <p>Modelo: {product.name}</p>
              <p>Precio unitario: ${product.price}</p>
              <p>Cantidad seleccionada: {product.quantity}</p>
              <p className="precioTotalArticulo">Precio total: ${product.price * product.quantity}</p>
@@ -34,10 +35,10 @@ const Cart = () => {
       </div>
           ) 
         },
-        console.log("el totalPriceCart es = $", totalPriceCart())
+        //console.log("el totalPriceCart es = $", totalPriceCart())
         )
       }
-      <div>El monto total a pagar es de: ${totalPriceCart()}</div>
+      <div className= "total-a-pagar"><h2>El total a pagar es de: ${totalPriceCart()}</h2></div>
       </>
         )
       }

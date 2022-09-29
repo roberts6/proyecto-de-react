@@ -14,13 +14,15 @@ import {useItemContext} from "../../CartContext"
 
 
 const ItemDetail = ({data}) => {
+  //console.log("esta es la data del itemDetail",data);
+  
 
-    const [purchase, setPurchase] = useState(false)
+    const [ setPurchase] = useState(false)
     //console.log("esta es la compra",purchase);
     const {AddItem} = useItemContext()
 
     const onCart = (quantity) => {
-      alert(`Se agrego: ${quantity}  ${data.title}`);
+      alert(`Se agrego: ${quantity}  ${data.name}`);
       AddItem(data ,quantity)
       setPurchase(true);
     };
@@ -55,7 +57,7 @@ const ItemDetail = ({data}) => {
         </Stack>
         <Box sx={{ mt: 3, ml: 1, mb: 1 }}>
       </Box>
-          <ItemCount stock={data.stock} setPurchase={true} name={data.title} id={data.id} img={data.image} initial={0} onCart={onCart} />
+          <ItemCount stock={data.stock} setPurchase={true} name={data.name} id={data.id} img={data.image} initial={0} onCart={onCart} />
       </Box>
 				</CardContent>
 			</CardActionArea>

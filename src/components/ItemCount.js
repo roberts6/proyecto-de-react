@@ -53,7 +53,7 @@ const ItemCount = ({stock, setPurchase, name, onCart, initial }) => {
         </div>
         )
     } else {
-      ////console.log("este es el nuevo estado de set",setPurchase);
+      //console.log("este es el nuevo estado de set",setPurchase);
       return null
     }
 

@@ -32,7 +32,7 @@ import {Db} from "../firebase/FirebaseConfig"
 // aplicación de la llamada a Firebase
 const ItemDetailContainer = () => {
   const [Item, setItem] = useState([]);
-  console.log("este es mi item",Item);
+  //console.log("este es mi item",Item);
   
 
   let { id } = useParams()
@@ -43,7 +43,7 @@ useEffect(() => {
     const docs = [];
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {
-   // console.log(doc.id, " => ", doc.data()); --> queda el id por fuera de mi objeto      
+   // //console.log(doc.id, " => ", doc.data()); --> queda el id por fuera de mi objeto      
    docs.push({...doc.data(),id: doc.id}) // --> de esta manera sumo el id a cada doc.data()
 }) 
 setItem(docs); 
@@ -53,7 +53,12 @@ setItem(docs);
   
 
   return ( 
-    <ItemDetail data={Item} />  
+    Item.map((data) => {
+return(
+
+  <ItemDetail data={data} />  
+)
+    })
   )
 }
 

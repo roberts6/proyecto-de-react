@@ -6,7 +6,7 @@ import { useItemContext } from '../CartContext';
 
 const CartWidget = () => {
     const {totalProductsCart} = useItemContext()
-    console.log("cartWidget = ",totalProductsCart());
+    //console.log("cartWidget = ",totalProductsCart());
     
     
 if (totalProductsCart() === 0) {
