@@ -141,7 +141,7 @@ color:white;
 
 .cards-individual .MuiPaper-root{
     padding: 1vw;
-    height: 70vh;
+    height: 75vh;
     display: flex;
     justify-content: center;
     overflow: scroll;
@@ -227,6 +227,10 @@ color:white;
     flex-direction: column;
     align-items: center;
     margin-top: 5vw;
+  }
+
+  .cart-empty h1 img {
+    width: 8vw;
   }
 
   .cart-empty a {

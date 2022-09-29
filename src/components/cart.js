@@ -2,6 +2,8 @@ import React from 'react'
 import { useItemContext } from '../CartContext';
 import {Link} from "react-router-dom"
 import JordanIcono from "../img/LogoJordanRojo.svg"
+import SadFace from "../img/SadFaceWhite.svg"
+
 
 
 const Cart = () => {
@@ -12,12 +14,13 @@ const Cart = () => {
   if (cartList.length === 0) {
     return(
       <div className = "cart-empty">
-      <h1>No hay nada en tu carrito :(</h1>
+      <h1>No hay nada en tu carrito <img src={SadFace} className="logo-navbar" alt="SadFace" /></h1>
       <Link to= "/">Vamos a comprar!! <img src={JordanIcono} className="logo-navbar" alt="logo" /> </Link>
     </div>
     )
   } else{
     return (
+      
       <>
       {cartList.map ((product) => { 
         return(
