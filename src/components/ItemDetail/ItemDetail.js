@@ -9,6 +9,7 @@ import Divider from '@mui/material/Divider';
 import ItemCount from "../ItemCount"
 import React, { useState } from 'react';
 import {useItemContext} from "../../CartContext"
+import Swal from 'sweetalert2'
 
 
 
@@ -22,9 +23,27 @@ const ItemDetail = ({data}) => {
     const {AddItem} = useItemContext()
 
     const onCart = (quantity) => {
-      alert(`Se agrego: ${quantity}  ${data.name}`);
-      AddItem(data ,quantity)
-      setPurchase(true);
+      //alert(`Se agrego: ${quantity}  ${data.name}`);
+      
+      Swal.fire({
+        title: `Agregaste ${quantity} del modelo ${data.name}`,
+        text: `Seguro que querés ${quantity} en tu carrito?`,
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Lo quiero!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire(
+            'Agregado!',
+            'Ya puedes verlo en tu carrito de compra',
+            'success'
+          )
+          AddItem(data ,quantity)
+          setPurchase(true);
+        }
+      })
     };
 
     

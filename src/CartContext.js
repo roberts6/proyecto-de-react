@@ -8,7 +8,7 @@ return ItemContextData
  } // de esta forma cada vez que importe el cotext a un componente no tengo que estar importando el useContext y el context propiamente dicho
 
 
- export const ApiProvider = ({ children }) => {
+ export const ApiProvider = ({ children }) => { // --> el ApiProvider es lo que voy a importar a APP.js para envolver a todos los componentes a los que quiera pasarle estas funciones
     const [cartList, setCartList] = useState([])
     const [status, setStatus] = useState("initial");
     const [data, setData] = useState([]);

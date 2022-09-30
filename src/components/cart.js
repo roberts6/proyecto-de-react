@@ -41,7 +41,12 @@ const Cart = () => {
         //console.log("el totalPriceCart es = $", totalPriceCart())
         )
       }
-      <div className= "total-a-pagar"><h2>El total a pagar es de: ${totalPriceCart()}</h2></div>
+      <div className= "total-a-pagar">
+        <h2>El total a pagar es de: ${totalPriceCart()}</h2>
+        <Link to = "/checkout">
+        <button className= "botonAnadir">Finalizar compra</button>
+        </Link>
+      </div>
       </>
         )
       }
