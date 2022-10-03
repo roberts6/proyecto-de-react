@@ -21,8 +21,9 @@ birthdate: Yup.date()
 .required("Valor requerido"),
 })
 
-const submitHandler = (values) => {
+const submitHandler = (values, resetForm) => {
   console.log(values);
+  resetForm();
 }
 
 const CheckOut = () => {
@@ -33,7 +34,7 @@ const CheckOut = () => {
       <h1>El último paso</h1>
       <Formik 
       initialValues = {{name: " ", lastname: " ", email: " ", birthdate: " "}}
-      onSubmit= {(values, {reset}) => submitHandler(values, reset)}
+      onSubmit= {(values, {resetForm}) => submitHandler(values, resetForm)}
       validationSchema={validation}
       >
         {(
