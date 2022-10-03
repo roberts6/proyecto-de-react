@@ -305,3 +305,39 @@ margin-bottom: 0.2vw;
     color: white;
     margin-top: 6vw;
 }
+
+.Form{
+  width: 30vw;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.Form .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root{
+  color: white;
+  text-align-last: center;
+}
+
+.Form .css-1d3z3hw-MuiOutlinedInput-notchedOutline{
+  border-color: lightgoldenrodyellow;
+}
+
+.Form .css-1d3z3hw-MuiOutlinedInput-notchedOutline{
+  margin-bottom: 1vw;
+}
+
+.Form img {
+  width: 13vw;
+}
+
+.Form button{
+  height: 10vh;
+}
+
+.checkout {
+  text-align: center;
+}
+
+.checkout h1 {
+  margin: 3vw;
+}

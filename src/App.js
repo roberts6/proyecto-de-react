@@ -14,8 +14,6 @@ import { ApiProvider } from "./CartContext"
 
 // Import views
 import CheckOut from "./views/checkout/CheckOut"
-// import Mujeres from "./views/mujeres/Mujeres"
-// import Kids from "./views/kids/Kids"
 import Login from "./views/LogIn/Login"
 import Category from "./views/Category/Category"
 

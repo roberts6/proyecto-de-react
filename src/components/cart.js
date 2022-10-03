@@ -3,6 +3,7 @@ import { useItemContext } from '../CartContext';
 import {Link} from "react-router-dom"
 import JordanIcono from "../img/LogoJordanRojo.svg"
 import SadFace from "../img/SadFaceWhite.svg"
+import Button from '@mui/material/Button';
 
 
 
@@ -44,7 +45,9 @@ const Cart = () => {
       <div className= "total-a-pagar">
         <h2>El total a pagar es de: ${totalPriceCart()}</h2>
         <Link to = "/checkout">
-        <button className= "botonAnadir">Finalizar compra</button>
+        <Button variant="contained" color="warning">
+        Finalizar compra
+      </Button>
         </Link>
       </div>
       </>
