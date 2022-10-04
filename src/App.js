@@ -13,7 +13,8 @@ import Cart from "./components/cart"
 import { ApiProvider } from "./CartContext"
 
 // Import views
-import CheckOut from "./views/checkout/CheckOut"
+//import CheckOut from "./views/checkout/CheckOut"
+import PruebaCheckOut from "./views/checkout/PruebaCheckOut"
 import Login from "./views/LogIn/Login"
 import Category from "./views/Category/Category"
 
@@ -43,7 +44,7 @@ function App() {
           <Route path= '/login' element={<Login />}/>
           <Route path= '/detail/:id' element={<ItemDetailContainer />}/>
           <Route path= '/cart' element={<Cart />}/>
-          <Route path= '/checkout' element={<CheckOut />}/>
+          <Route path= '/checkout' element={<PruebaCheckOut />}/>
        </Routes>
      </div>
 </Router>

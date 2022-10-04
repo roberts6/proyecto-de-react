@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { useItemContext } from '../../CartContext';
 import { Button, TextField } from '@mui/material';
 import LogoJordan from "../../img/LogoJordanBlanco.svg"
@@ -26,9 +26,18 @@ const submitHandler = (values, resetForm) => {
   resetForm();
 }
 
+const initialState = {
+  name: "",
+  lastname: "",
+  mail: "",
+  birthdate: ""
+}
+
 const CheckOut = () => {
   const {cartList, totalPriceCart} = useItemContext()
+  const [values, setValues] = useState(initialState)
   console.log("esto veo en mi checkout", cartList, "por un total de", totalPriceCart());
+
   return(
     <div className="checkout">
       <h1>El último paso</h1>
@@ -39,7 +48,7 @@ const CheckOut = () => {
       >
         {(
           values,
-          erros,
+          errors,
           touched,
           handleChange,
           handleBlur,
@@ -57,6 +66,7 @@ const CheckOut = () => {
         value= {values.name} // este values es el que se pasa por parámetro y toma el valor del input
         onBlur= {handleBlur}
         />
+        {/* {errors.name && touched.name && errors.name} */}
          <TextField 
         name = "lastname"
         placeholder = "Jordan"
@@ -65,6 +75,7 @@ const CheckOut = () => {
         value= {values.lastname}
         onBlur= {handleBlur}
         />
+        {/* {errors.lastname && touched.lastname && errors.lastname} */}
          <TextField 
         name = "mail"
         placeholder = "MJ@gmail.com"
@@ -73,6 +84,7 @@ const CheckOut = () => {
         value= {values.mail}
         onBlur= {handleBlur}
         />
+        {/* {errors.mail && touched.mail && errors.mail} */}
          <TextField 
         name = "birthdate"
         placeholder = "17/2/1963"
@@ -81,6 +93,7 @@ const CheckOut = () => {
         value= {values.birthdate}
         onBlur= {handleBlur}
         />
+        {/* {errors.birthdate && touched.birthdate && errors.birthdate} */}
        <Button variant = "contained"
        type = "submit" // si no está el type el formulario no funciona
        color = "warning"
