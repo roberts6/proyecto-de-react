@@ -80,7 +80,7 @@ return (
 
 
 return(
-    <ItemContext.Provider value={ {data, setData, status, setStatus, AddItem, RemoveItem, Clear, isInCart, totalProductsCart, totalPriceCart, cartList } }>
+    <ItemContext.Provider value={ {data, setData, status, setStatus, AddItem, RemoveItem, Clear, isInCart, totalProductsCart, totalPriceCart, cartList, setCartList } }>
         {children}
     </ItemContext.Provider>
 )

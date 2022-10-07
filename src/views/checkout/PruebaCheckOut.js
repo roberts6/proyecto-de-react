@@ -17,7 +17,7 @@ const initialState = {
 const PruebaCheckOut = () => {
     const [values, setValues] = useState(initialState);
     
-    const {cartList, totalProductsCart} = useItemContext()
+    const {cartList, setCartList} = useItemContext()
 
     const handleOnChange = (e) => {
 const {value, name} = e.target; 
@@ -40,8 +40,7 @@ Swal.fire({
   imageHeight: 300,
   imageAlt: 'Custom image',
 })
-cartList=[""]
-totalProductsCart({})
+setCartList([]);
 }
 
   return (
