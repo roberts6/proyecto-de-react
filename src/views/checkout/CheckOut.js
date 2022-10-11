@@ -19,23 +19,23 @@ mail: Yup.string().email("Ese mail no es válido").required("Valor requerido"),
 birthdate: Yup.date()
 .max(new Date(Date.now() - 567648000000), "Sos menor de 18 años")
 .required("Valor requerido"),
-})
+}). required(); 
 
 const submitHandler = (values, resetForm) => {
   console.log(values);
   resetForm();
 }
 
-const initialState = {
-  name: "",
-  lastname: "",
-  mail: "",
-  birthdate: ""
-}
+// const initialState = {
+//   name: "",
+//   lastname: "",
+//   mail: "",
+//   birthdate: ""
+// }
 
 const CheckOut = () => {
   const {cartList, totalPriceCart} = useItemContext()
-  const [values, setValues] = useState(initialState)
+  //const [values, setValues] = useState(initialState)
   console.log("esto veo en mi checkout", cartList, "por un total de", totalPriceCart());
 
   return(

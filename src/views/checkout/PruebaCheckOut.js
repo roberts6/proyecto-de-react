@@ -6,6 +6,7 @@ import {Db} from "../../firebase/FirebaseConfig"
 import { useItemContext } from '../../CartContext';
 import Swal from 'sweetalert2'
 import Logo from "../../img/JordanIcono.svg"
+//import {Form, Formik, Field} from "formik"
 
 const initialState = {
     name:"",
@@ -21,7 +22,8 @@ const PruebaCheckOut = () => {
 
     const handleOnChange = (e) => {
 const {value, name} = e.target; 
-setValues({...values, [name]: value})
+setValues({...values, [name]: value}) // acá se le agrega a "values" (que comienza vacío en el initialState) 
+// el campo name que está dentro de cada textfield y su valor respectivo 
 }
 
 const onSubmit = async (e) => {

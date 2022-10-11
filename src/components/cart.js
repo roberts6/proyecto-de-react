@@ -20,8 +20,7 @@ const Cart = () => {
     </div>
     )
   } else{
-    return (
-      
+    return ( 
       <>
       {cartList.map ((product) => { 
         return(
@@ -31,7 +30,10 @@ const Cart = () => {
           <div className= "cart-description">
           <p>Modelo: {product.name}</p>
              <p>Precio unitario: ${product.price}</p>
-             <p>Cantidad seleccionada: {product.quantity}</p>
+             <p>Cantidad seleccionada: {product.quantity}</p> <div className="handlerButtons">  
+            {/* <button onClick={ () => product.quantity - 1}>-</button>
+            <button >+</button> */}
+          </div> 
              <p className="precioTotalArticulo">Precio total: ${product.price * product.quantity}</p>
              <button onClick={() => RemoveItem(product.id)}>Eliminar</button>
           </div>   

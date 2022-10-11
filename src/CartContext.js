@@ -34,7 +34,7 @@ return ItemContextData
 // }
 
 const AddItem = (data, quantity) => {
-    // creo un nuevo array. Si existe el producto le suma cantidad y sino creo un nuevo objeto. --> REVISAR!
+    // creo un nuevo array. Si existe el producto le suma cantidad y sino creo un nuevo objeto.
     let newCart;
     let product = cartList.find(product => product.id === data.id);
     if (product) {
@@ -47,7 +47,6 @@ const AddItem = (data, quantity) => {
  setCartList(newCart)
  //console.log("mi newCrt es: ",newCart);
 }
-
 
 // traigo todos los id que no sean el que paso por parámetro
 const RemoveItem = (id) => {
