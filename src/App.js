@@ -17,6 +17,7 @@ import { ApiProvider } from "./CartContext"
 import PruebaCheckOut from "./views/checkout/PruebaCheckOut"
 import Login from "./views/LogIn/Login"
 import Category from "./views/Category/Category"
+import Authentication from "./components/Authentication"
 
 
 function App() {
@@ -38,7 +39,7 @@ function App() {
        <Routes>
           <Route path= '/' element={<ItemListContainer />}/> 
           <Route path='/category/:genre' element={<Category />}/>
-          <Route path= '/login' element={<Login />}/>
+          <Route path= '/login' element={<Authentication />}/>
           <Route path= '/detail/:id' element={<ItemDetailContainer />}/>
           <Route path= '/cart' element={<Cart />}/>
           <Route path= '/checkout' element={<PruebaCheckOut />}/>

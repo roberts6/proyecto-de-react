@@ -6,19 +6,36 @@ import {Db} from "../../firebase/FirebaseConfig"
 import { useItemContext } from '../../CartContext';
 import Swal from 'sweetalert2'
 import Logo from "../../img/JordanIcono.svg"
-//import {Form, Formik, Field} from "formik"
+import {Form, Formik } from "formik"
+import * as Yup from "yup"
 
 const initialState = {
-    name:"",
-    lastname:"",
-    mail: "",
-    birthdate: ""
+  name:"",
+  lastname:"",
+  mail: "",
+  birthdate: ""
 }
+
 
 const PruebaCheckOut = () => {
     const [values, setValues] = useState(initialState);
+    console.log("values",values);
+    
     
     const {cartList, setCartList} = useItemContext()
+
+    const validation = Yup.object().shape({
+      name: Yup.string().min(2, 'Nombre demasiado corto') // la propiedad name de mi textfield que sea un string, mínimo 2 caracteres, máximo 30 y que sea un valor requerido.
+      .max(30, 'Nombre demasiado largo')
+      .required('Valor requerido'), 
+      lastname: Yup.string().min(2, 'Nombre demasiado corto')
+      .max(30, 'Nombre demasiado largo')
+      .required('Valor requerido'),
+      mail: Yup.string().email("Ese mail no es válido").required("Valor requerido"),
+      birthdate: Yup.date()
+      .max(new Date(Date.now() - 567648000000), "Sos menor de 18 años")
+      .required("Valor requerido"),
+      }). required(); 
 
     const handleOnChange = (e) => {
 const {value, name} = e.target; 
@@ -48,19 +65,35 @@ setCartList([]);
   return (
     <div className="checkout">
       <h1>El último paso</h1>
-      <form className = "Form" onSubmit={onSubmit}>
+      <Formik
+      validationSchema = { validation }
+      >
+       {(
+          values,
+          errors,
+          touched,
+          handleChange,
+          handleBlur,
+          handleSubmit,
+          isValid,
+          dirty, 
+        ) => (
+      <Form className = "Form" onSubmit={onSubmit}>
         <TextField 
         name = "name"
         placeholder = "Michael"
         variant = "outlined"
+        type = "text"
         value= {values.name} // este values es el que se pasa por parámetro y toma el valor del input
         onChange= {handleOnChange}
         />
+        {/* <ErrorMessage name = {values.name}/> */}
         {/* {errors.name && touched.name && errors.name} */}
          <TextField 
         name = "lastname"
         placeholder = "Jordan"
         variant = "outlined"
+        type = "text"
         value= {values.lastname}
         onChange= {handleOnChange}
         />
@@ -68,7 +101,8 @@ setCartList([]);
          <TextField 
         name = "mail"
         placeholder = "MJ@gmail.com"
-        variant = "outlined"       
+        variant = "outlined" 
+        type = "mail"      
         value= {values.mail}
         onChange= {handleOnChange}
         />
@@ -76,7 +110,8 @@ setCartList([]);
          <TextField 
         name = "birthdate"
         placeholder = "17/2/1963"
-        variant = "outlined"       
+        variant = "outlined" 
+        type = "date"      
         value= {values.birthdate}
         onChange= {handleOnChange}
         />
@@ -85,7 +120,9 @@ setCartList([]);
        type = "submit" // si no está el type el formulario no funciona
        color = "warning"
        > <img src={LogoJordan} alt="JordanLogo"></img></Button>
-      </form>
+      </Form>
+      )}
+      </Formik>
       </div>
   )
 }

@@ -58,6 +58,22 @@ fieldset .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
   text-decoration: none;
 }
 
+.opciones {
+    display: flex;
+    align-items: center;
+}
+
+.opciones div .css-1e6y48t-MuiButtonBase-root-MuiButton-root{
+    margin: 1vw 2vw;
+    text-decoration: none;
+    color: white;
+    font-size: 2.2vw;
+}
+
+.opciones div .css-1e6y48t-MuiButtonBase-root-MuiButton-root:hover{
+  font-weight: 700;
+}
+
 .opciones a{
     margin: 1vw 2vw;
     text-decoration: none;
@@ -342,4 +358,28 @@ margin-bottom: 0.2vw;
 
 .checkout h1 {
   margin: 3vw;
+}
+
+.login input{
+color: white;
+font-size: 2vw;
+}
+
+.login label{
+  color: white;
+}
+
+.login svg {
+  color: white;
+}
+
+.login .MuiBox-root .css-1nylpq2{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 2vw;
+}
+
+.login .MuiButtonBase-root{
+  margin-top: 2vw;
 }

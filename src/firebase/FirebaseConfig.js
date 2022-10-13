@@ -3,6 +3,7 @@ import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 import { getFirestore } from "firebase/firestore"
+//import { getAuth, connectAuthEmulator, signInWithEmailAndPassword } from "firebase/auth"
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -20,3 +21,10 @@ const app = initializeApp(firebaseConfig);
 // esta constante "Db" (data base) recibe todo el archivo de configuración y lo exporto para ser usado en los componentes que sea necesario.
 export const Db = getFirestore(app);
 // como no hago un export default a la hora de importarlo debo colocarlo entre { }
+
+
+// autentificación con firebase
+//const auth = getAuth(firebaseConfig)
+
+// se usa para desarrollo y testing. Corre de manera local
+//connectAuthEmulator(auth, "http://localhost9099");
