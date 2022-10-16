@@ -40,8 +40,10 @@ import {Link} from "react-router-dom"
           horizontal: 'left',
         }}
       >
+        <div className= "opciones-login">
         <MenuItem onClick={handleClose}><Link to= "/login">Login</Link></MenuItem>
-        <MenuItem onClick={handleClose}>Sign in</MenuItem>
+        <MenuItem onClick={handleClose}><Link to= "/singIn">Sign in</Link></MenuItem>
+        </div>
       </Menu>
     </div>
   );

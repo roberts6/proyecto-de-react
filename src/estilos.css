@@ -84,6 +84,11 @@ fieldset .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
   font-weight: 700;
 }
 
+.opciones-login a{
+  text-decoration: none;
+    color: black;
+}
+
 .itemList{
     display: flex;
     flex-direction: column;
@@ -382,4 +387,5 @@ font-size: 2vw;
 
 .login .MuiButtonBase-root{
   margin-top: 2vw;
+  margin-bottom: 3vw;
 }
