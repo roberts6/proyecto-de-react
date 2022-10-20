@@ -19,7 +19,7 @@ const signIn = () => {
         <TextField id="input-with-sx" label="Password" variant="standard" type= "password" />
       </Box>
       <Button variant="contained" color="warning">
-        Login
+        Sign In
       </Button>
     </Box>
     </div>
