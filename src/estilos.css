@@ -389,3 +389,21 @@ font-size: 2vw;
   margin-top: 2vw;
   margin-bottom: 3vw;
 }
+
+.opciones-talles .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input{
+  color: white;
+}
+
+.opciones-talles path{
+  color: white;
+}
+
+.opciones-talles .css-1d3z3hw-MuiOutlinedInput-notchedOutline{
+  border-color: white;
+  width: 11vw;
+}
+
+.opciones-talles .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root{
+  color: white;
+  display: flex;
+}
